@@ -30,7 +30,7 @@
 *,*:before, *:after{box-sizing:border-box;outline:none;}
 *,body,html{-webkit-text-size-adjust: none;-webkit-appearance: none;max-height: 9001em;}
 html{height:100%;}
-body{min-height:100%;width:100%;min-width:320px;font-family:arial,sans-serif;background:#fff;color:#3d3d3d;position:relative;font-size: 16px;line-height: 1;
+body{min-height:100%;width:100%;min-width:320px;font-family:arial,sans-serif;background:#fff;color:#0f0f0f;position:relative;font-size: 14px;line-height: 1; font-weight: 400;
 
     /* styles for wp-admin panel */
 
@@ -62,7 +62,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 
 /* wraps styling*/
 
-.mbox{max-width:1024px;width:100%;margin:0 auto;position:relative;z-index:1;}
+.mbox{max-width:1170px;width:100%;margin:0 auto;position:relative;z-index:1; padding: 0 15px;}
 .mbox:after{content:"";clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;display:block;}
 
 /* /wraps styling*/
@@ -99,3 +99,19 @@ input, textarea{
 
 
 /*/fonts*/
+/*header*/
+    .header{
+        &__butter{}
+        &__main{}
+        &__cabinet{}
+        &__row{ display: flex; justify-content:space-between; align-items: center;}
+        &__nav {
+            ul { display: flex; justify-content: space-between; align-items: center; list-style-type:none; margin: 0; padding: 0; text-transform: uppercase; font-weight: 400; font-size: 12px;}
+        }
+        &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 19px;
+            input{border:none;}
+            ul{ margin: 0; padding: 0; list-style-type: none;}
+        }
+
+    }
+/*END header*/

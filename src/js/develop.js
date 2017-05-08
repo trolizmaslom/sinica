@@ -73,6 +73,7 @@ function paginator(){
         var downX;
         function onMouseDown(e) {
             if (e.which != 1) return;
+            if (!$(e.target).hasClass('paginator__pin')) return;
             downX = e.pageX;
             pin = $('.paginator__pin');
             drag = true;
@@ -116,7 +117,29 @@ function paginator(){
         document.onmousemove = onMouseMove;
         document.onmouseup = onMouseUp;
         document.onmousedown = onMouseDown;
+        area.click(function (e) {
+            var x = e.offsetX == undefined ? e.layerX : e.offsetX;
+            var cur = parseInt(x / step);
+            var set = cur*step + step/2;
+            if (set >= width){
+                set = width - step/2;
+            }
+            $('.paginator__pin').css('left', set);
+            lastX = parseInt($('.paginator__pin').css('left'));
+            $('.top-slider__wrap').slick('slickGoTo',cur);
+        });
 
+    }
+}
+function slideActualInit() {
+    var slider = $('.actual__slider');
+    if(slider.length > 0){
+        slider.slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            speed: 500
+        });
     }
 }
 $(document).ready(function(){
@@ -125,4 +148,5 @@ $(document).ready(function(){
     leftMenu();
     slideInit();
     paginator();
+    slideActualInit();
 });

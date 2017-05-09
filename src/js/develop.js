@@ -128,17 +128,44 @@ function paginator(){
             lastX = parseInt($('.paginator__pin').css('left'));
             $('.top-slider__wrap').slick('slickGoTo',cur);
         });
+        $('.top-slider__wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+
+            var set = slick.currentSlide * step + step/2;
+            if (set >= width){
+                set = width - step/2;
+            }
+            $('.paginator__pin').css('left', set);
+            lastX = parseInt($('.paginator__pin').css('left'));
+        });
 
     }
 }
 function slideActualInit() {
-    var slider = $('.actual__slider');
+    var slider = $('.actual__slide');
     if(slider.length > 0){
         slider.slick({
             dots: true,
             arrows: false,
             infinite: false,
-            speed: 500
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            speed: 500,
+            responsive: [
+                {
+                    breakpoint: 1116,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 760,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
         });
     }
 }

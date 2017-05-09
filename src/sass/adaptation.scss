@@ -9,7 +9,11 @@
 	.header__telserch{ margin-right: 220px;}
 	.header__logo{ margin-left: 50px;}
 }
+@media screen and (max-width: 1100px){
+	.footer__social{ padding-left: 20px;}
+}
 @media screen and (max-width: 992px){
+	.left-menu__content{overflow-y: scroll;}
 	.left-menu__group{ display: block;}
 	.header__nav{ display: none;}
 	.header__cabinet{ flex-direction: column-reverse; top: 10px; position: fixed;}
@@ -25,7 +29,7 @@
 	.top-slider{ min-height: 1px;}
 	.footer__wrap{ flex-direction: column; align-items: center;}
 	.footer__nav{ display: none;}
-	.footer__contact{ width: 100%; border:none; margin-bottom: 30px; height: 85px;}
+	.footer__contact{ width: 100%; border:none; margin-bottom: 30px; height: auto; flex-direction: row; }
 	.footer__social{ width: 100%; }
 	.footer__social-row{ justify-content:space-around; margin-bottom: 10px;}
 	.footer__contact a{ width: auto;}
@@ -44,9 +48,8 @@
 	.top-slider__right{ width: 150px;}
 	.top-slider__left{ text-align: center; width: 100%;}
 	.paginator{ width: 300px; left: calc(50% - 150px);}
-	.actual__slide{ flex-direction: column; align-items: center;}
-	.actual__item{ width: 300px; margin-bottom: 15px;}
-	.actual__img{ height: auto;}
+
+
 	.actual .slick-dots{ top: -38px;}
 }
 @media screen and (max-width: 479px){
@@ -58,4 +61,5 @@
 	.actual__item{ width: 100%;}
 	.about{ padding-top: 50px;}
 	.about:before{ top: 70px; height:calc(100% - 70px);}
+	.footer__contact{ flex-direction: column; height: 85px;}
 }

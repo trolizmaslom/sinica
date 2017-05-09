@@ -145,7 +145,7 @@ input, textarea{
             }
         }
         &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 20px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 41px;  box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12); padding-right: 8px; z-index: 50;
-            &:before{content: ''; position: absolute; background-image: url(../images/search.png); width: 16px; height: 16px; left: 11px;}
+            &:before{content: ''; position: absolute; background-image: url(../images/search.png); width: 16px; height: 16px; left: 11px; top: 11px;}
             input{border:none; width: 100%; font-weight: 100; color: #000; background-color: transparent;}
         }
         &__tel{ margin-left: 20px; padding-bottom: 4px;
@@ -209,7 +209,7 @@ input, textarea{
           &:last-child{transform:rotate(-45deg);}
         }
       }
-      &__content{ padding-top: 43px; overflow-y: scroll;        height: 100%;
+      &__content{ padding-top: 43px; overflow-y:auto;        height: 100%;
         ul{ list-style-type: none; width: 100%; font-family:'futura'; text-transform: uppercase; padding: 0; margin: 0;}
         li{ border-bottom:1px solid #f6f6f6; position: relative; width: 100%; padding:12px 8px 16px 147px;}
         a{ color: #292929; text-decoration: none;
@@ -273,10 +273,9 @@ input, textarea{
     &__slider{}
     &__slide-wrap{}
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start;}
-    &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 5px;  background-color: #fff;
+    &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 auto;  background-color: #fff;
       &:hover{text-decoration: none;
-        .actual__txt span:first-child{ font-weight: 500; color: #1a1a1a; letter-spacing: 0;}
-        .actual__txt span:last-child{ font-weight: 600; color: #1a1a1a; letter-spacing:0;}
+        .actual__txt span{color: #000;}
         .actual__img:before{background-color: rgba(0,0,0,0.85)}
       }
       img{ position: relative; z-index: 5;}
@@ -289,8 +288,8 @@ input, textarea{
     }
     &__texter{ color: #fff; position: absolute; bottom: 0; left: 0; z-index: 20; padding:27px;}
     &__txt{display: flex; justify-content: space-between;
-      span:first-child{ color: #808080; font-weight: 200; }
-      span:last-child{ color: #333; letter-spacing: 2px;
+      span:first-child{ color: #aaa; font-weight: 200; }
+      span:last-child{ color: #777; letter-spacing: 2px;
         &:hover{ text-decoration: underline;}
         }
     }
@@ -329,7 +328,7 @@ input, textarea{
     &__contact{ width: 344px; border-left: 1px solid #7c7c7c; border-right: 1px solid #7c7c7c; height: 114px; display: flex; justify-content: space-around; align-items: center ; flex-direction: column;
       a{width: 240px;}
     }
-    &__social{ width: 230px; display: flex; justify-content: center; align-items: center; flex-direction: column; font-weight: 300;
+    &__social{ width: 230px; display: flex; justify-content: center; align-items: center; flex-direction: column; font-weight: 300; padding-left: 65px;
       &-row{ display: flex; justify-content:flex-start; align-items: center;  width: 100%; margin-bottom: 25px;}
     }
   }

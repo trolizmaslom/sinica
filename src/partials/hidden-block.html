@@ -9,35 +9,54 @@
         </div>
     </div>
 
-    <div id="call-popup">
-        <form action="ajax.php" name="" class="contact-form">
-            <div class="contact-form-title">
-                <h5>Lorem ipsum dolor.</h5>
-            </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
+
+    <div class="popup popup-reg">
+        <div class="popup__title"><span>Приєднуйся до нас</span></div>
+        <div class="popup__content">
+            <div class="popup__form">
+                <form action="ajax.php">
+                    <div class="form_row">
                         <div class="form_input">
-                            <input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">
+                            <input type="text" name="contact_name" required="required" value="" >
+                            <div class="placeholder">Ім’я <i>*</i></div>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="contact_surname" required="required" value="">
+                            <div class="placeholder">Прізвище<i>*</i></div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form-item">
-                    <div class="contact-form-item-input form_row">
+                    <div class="form_row">
                         <div class="form_input">
-                            <input type="text" name="contact_tel" value="" required="required" placeholder="Ваш номер" class="tel-mask">
+                            <input type="email" name="contact_email" required="required" value="" >
+                            <div class="placeholder">E-mail<i>*</i></div>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="contact_tel" value="" required="required" class="tel-mask">
+                            <div class="placeholder">Телефон</div>
                         </div>
                     </div>
-                </div>
+                    <div class="form_row">
+                        <div class="form_input">
+                            <input type="password" name="pass" required="required" value="" >
+                            <div class="placeholder">Пароль<i>*</i></div>
+                        </div>
+                        <div class="form_input">
+                            <input type="password" name="repass" value="" required="required">
+                            <div class="placeholder">Повтори пароль<i>*</i></div>
+                        </div>
+                    </div>
+                    <div class="form_row form_row--between">
+                        <p></p>
+                        <button class="button button--reg"><span>Зареєструватися</span></button>
+                    </div>
+                </form>
             </div>
-            <div class="contact-form-row cfix">
-                <div class="contact-form-item">
-                    <button type="submit" class="contact-submit">
-                        <span>Отправить заявку</span>
-                    </button>
-                </div>
-            </div>
-        </form>
+        </div>
+        <div class="popup__social">
+            <a href="#" class="icon icon--white"><span><img src="images/ic6-w.png" alt=""></span></a>
+            <a href="#" class="icon icon--white"><span><img src="images/ic7-w.png" alt=""></span></a>
+            <a href="#" class="icon icon--white"><span><img src="images/ic8-w.png" alt=""></span></a>
+        </div>
     </div>
 
 </div>

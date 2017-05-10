@@ -111,10 +111,16 @@ input, textarea{
 
 /*/fonts*/
 /*buttons text*/
-  .button{border:none; background: transparent; cursor: pointer;  text-decoration: none; display: inline-block;
+  .button{border:none; background: transparent; cursor: pointer;  text-decoration: none; display: inline-block; outline: none;
     span{ display: flex; justify-content: center; align-items: center; font-weight: 600; font-size: 18px; width: 196px; height: 55px; box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.24); background-color: #fff; border-radius: 28px; color: #000; }
     &:hover{ text-decoration: none;
       span{background-color: rgb(255, 234, 0); box-shadow: 0px 10px 20px 0px rgba(255, 234, 0, 0.75); color: #fff;}
+    }
+    &--reverse{
+      span{background-color: rgb(255, 234, 0); box-shadow: 0px 10px 20px 0px rgba(255, 234, 0, 0.75); color: #fff; width: 250px;}
+      &:hover{
+        span{ background-color: #fff; box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.24); color: #000;}
+      }
     }
    
 
@@ -124,14 +130,55 @@ input, textarea{
   h3{ font-size: 30px; font-weight: 700;}
   p{ margin: 0 0 4px;}
 /*END buttons text*/
+/*forms*/
+  .form_input{ width: 100%; margin: 0 auto 22px;}
+  .form_row{
+    &--between{ display: flex; justify-content: space-between; align-items: flex-start; padding-top: 14px; padding-bottom: 30px;
+      a{ text-decoration: underline; color: #000; font-weight: 400; font-size: 12px;
+        &:hover{ text-decoration: none;}
+      }
+    }
+    input{border:1px solid rgb(198, 198, 198); width: 100%; height: 36px; line-height: 36px; background-color: #fff; border-radius: 18px; font-weight: 100; padding-left: 15px;}
+    input[type="checkbox"]{ display: none;}
+    input[type="checkbox"]:checked + i:before{opacity: 1;}
+    input[type="checkbox"] + i{ width: 17px; height: 17px; display: inline-block;border:1px solid rgb(198, 198, 198); position: relative; margin-right: 14px;
+      &:before{content:''; display: block; position: absolute; background-image: url(../images/checked.png); width: 10px; height: 7px; opacity:0; top: 4px; left: 3px;}
+    }
+  }
+/*END forms*/
 /*header*/
+.login-pop{ position: relative; text-align: center;
+  &__menu-wrap{position: absolute; right: 0; top:calc(100% + 27px); display: none;
+    &:before{content: ''; position: absolute; right: 8px; top: -6px; width: 22px; height: 22px; background-color: #ffea00; box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12); transform:rotate(45deg); z-index: 10;}
+  }
+  &__menu{ background-color: #fff; box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);  width: 360px; z-index: 20; border-radius: 3px; position: relative;
+    &:before{content: ''; position: absolute; right: 8px; top: -6px; width: 22px; height: 22px; background-color: #ffea00; transform:rotate(45deg); z-index: -1;}
+  }
+  &__content{padding: 39px 34px 0;}
+  &__title{ height: 72px; background-color: #ffea00; color: #fff; text-transform: uppercase; display: flex; justify-content: center; align-items: center; font-weight: 700;}
+  &__form{ margin-bottom:43px;
+    label{ display: flex; cursor: pointer; justify-content: center; align-items: center; font-size: 12px; font-weight: 400;}
+  }
+  &__socials{border-top:1px solid rgb(198, 198, 198); padding-top: 36px; padding-bottom: 40px;
+    h6{ text-align: center; font-weight: 400; font-size: 14px; color: #808080; margin-bottom: 27px;}
+    p{ display: flex; justify-content: center; align-items: center;}
+  }
+  &__register{ background-color: #f2f2f2; height: 72px;  display: flex; justify-content: center; align-items: center;
+    a{ text-decoration: underline; color: #000; font-weight: 400;
+      &:hover{ text-decoration: none;}
+    }
+    }
+}
+
+
+
+    header{ position: relative; z-index: 999;}
     .header{ position: relative; border-bottom:1px solid #c6c6c6;
         &__butter{ position: absolute; left: 37px; top: 50px; z-index: 400;}
         &__butter-button{ cursor: pointer; position: relative;
           span{ background-image: url(../images/butter.png);  background-position: 7px 1px; width: 40px; height: 40px; background-repeat: no-repeat; display: block;
             &:hover{ background-image: url(../images/butter-h.png); background-position: 0 0;}
           }
-
         }
         &__main{}
         &__telserch{ display: flex; justify-content: space-between; align-items: center; width: 465px; padding-top: 4px;}
@@ -144,23 +191,33 @@ input, textarea{
               }
             }
         }
-        &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 20px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 41px;  box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12); padding-right: 8px; z-index: 50;
+        &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 20px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 41px;  padding-right: 8px; z-index: 50;
             &:before{content: ''; position: absolute; background-image: url(../images/search.png); width: 16px; height: 16px; left: 11px; top: 11px;}
             input{border:none; width: 100%; font-weight: 100; color: #000; background-color: transparent;}
+            &:hover,
+            &.focus{ box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12);}
         }
         &__tel{ margin-left: 20px; padding-bottom: 4px;
           p{ margin: 0;}
-          a{ color: #0f0f0f; font-family:'BwSurcoDEMO', sans-serif; font-weight: 700; font-size:19px; display: block; padding-top: 6px; text-decoration: none; position: relative;
+          a{ color: #0f0f0f; font-weight: 700; font-size:19px; display: block; padding-top: 6px; text-decoration: none; position: relative;
             &:before{ content: ''; display: block; width: 100%; height: 1px; background-color: #000; left: 0; bottom:-3px; position: absolute; animation-play-state: paused; animation-name: tel; animation-duration: 2s; animation-iteration-count: infinite; opacity: 0;}
             &:hover:before{animation-play-state: running; opacity: 1;}
           }
         }
-        &__cabinet{ position: absolute; top: 33px; right: 47px; z-index: 300;}
+        &__cabinet{ position: absolute; top: 44px; right: 16px; z-index: 300;}
     }
     .search-style{ list-style-type: none; background-color: rgb(255, 255, 255); box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12); padding: 20px; border-radius: 20px 15px 5px; width: 100%!important; position: absolute!important; top: calc(100% + 12px) !important; left: 0!important; font-weight: 100;
       li{ margin-bottom: 16px;}
     }
     .ui-helper-hidden-accessible{ display: none;}
+
+
+
+
+
+
+
+
     .cabinet{ display: flex; justify-content: center; align-items: center;
         &__menu-wrap{position: absolute; right: 0; top:calc(100% + 27px); display: none;
           &:before{content: ''; position: absolute; right: 20px; top: -6px; width: 22px; height: 22px; background-color: #fff; box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12); transform:rotate(45deg); z-index: 10;}
@@ -179,7 +236,7 @@ input, textarea{
           }
         }
         &__item{ margin-right: 19px;
-            a{ display: flex; border-radius:50%; width: 40px; height: 40px; border:1px solid #000; justify-content: center; align-items: center; cursor: pointer; background-color: #fff;
+            &>a{ display: flex; border-radius:50%; width: 40px; height: 40px; border:1px solid #000; justify-content: center; align-items: center; cursor: pointer; background-color: #fff;
                 &:hover{background-color: rgb(255, 234, 0);box-shadow: 0px 6px 13px 0px rgba(255, 234, 0, 0.75);  border-color:  rgb(255, 234, 0);
                     .cabinet__market{ background-image: url(../images/ic01-h.png);}
                     .cabinet__basket{ background-image: url(../images/ic02-h.png);}
@@ -278,7 +335,7 @@ input, textarea{
         .actual__txt span{color: #000;}
         .actual__img:before{background-color: rgba(0,0,0,0.85)}
       }
-      img{ position: relative; z-index: 5;}
+      img{ position: relative; z-index: 5; margin: 0 auto;}
       h4{ font-size: 24px; font-weight: 800;}
       h6{ font-weight: 400; text-transform: uppercase; font-size: 11px; margin: 14px 0 17px;}
       p{ line-height: 1.571;}
@@ -337,6 +394,12 @@ input, textarea{
     span:first-child{width: 30px; height: 30px; background-color: #fff; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 15px;}
     &:hover { text-decoration: none;
       span:first-child { background-color: #ffea00; }
+    }
+    &--white{
+      span:first-child{ width: 50px; height: 50px; background-color: #c6c6c6; margin-right: 19px;}
+      &:last-child{
+        span:first-child{ margin-right: 0;}
+      }
     }
   }
 /*END footer*/

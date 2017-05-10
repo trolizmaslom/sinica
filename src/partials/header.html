@@ -63,15 +63,50 @@
         <div class="header__cabinet cabinet">
             <div class="cabinet__item"><a href="#"  ><span class="cabinet__market"></span></a></div>
             <div class="cabinet__item"><a href="#"  ><span class="cabinet__basket"></span></a></div>
-            <div class="cabinet__item" style="display: none;"><a href="#"  ><span class="cabinet__user"  ></span></a></div>
-            <div class="cabinet__login">
+            <div class="cabinet__item login-pop"><a href="#"  ><span class="cabinet__user"  ></span></a>
+                <div class="login-pop__menu-wrap">
+                    <div class="login-pop__menu">
+                        <div class="login-pop__title"><span>Вхід в особистий кабінет</span></div>
+                        <div class="login-pop__content">
+                            <form action="ajax.php" class="login-pop__form">
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <input type="email" name="contact_mail" required="required" value="" placeholder="Введи E-mail">
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_input">
+                                        <input type="password" name="contact_pass" required="required" value="" placeholder="Пароль">
+                                    </div>
+                                </div>
+                                <div class="form_row form_row--between">
+                                    <label><input type="checkbox"><i></i><span>Запам’ятай мене</span></label>
+                                    <a href="#">Забули пароль?</a>
+                                </div>
+                                <div class="form_row">
+                                    <button class="button button--reverse"><span>Вхід</span></button>
+                                </div>
+                            </form>
+                            <div class="login-pop__socials">
+                                <h6>Зайди через соц мережі:</h6>
+                                <p>
+                                    <a href="#" class="icon icon--white"><span><img src="images/ic6-w.png" alt=""></span></a>
+                                    <a href="#" class="icon icon--white"><span><img src="images/ic7-w.png" alt=""></span></a>
+                                    <a href="#" class="icon icon--white"><span><img src="images/ic8-w.png" alt=""></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="login-pop__register"><a href="#">Зареєструватися</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cabinet__login"  style="display: none;">
                 <a href="#"><img src="images/ava.png" alt=""></a>
                 <div class="cabinet__menu-wrap">
                     <div class="cabinet__menu">
                         <ul>
                             <li><a href="#">Мій профіль</a></li>
-                            <li><a href="#">Мій кошик</a></li>
-                            <li><a href="#">Замовлення</a></li>
                             <li><a href="#">Вихід</a></li>
                         </ul>
                     </div>

@@ -7,11 +7,33 @@ function autocompleteInit(){
                 "ui-autocomplete": "search-style"
             }
         });
+        input.focus(function () {
+            $('.header__search').addClass('focus');
+        });
+        input.blur(function () {
+            $('.header__search').removeClass('focus');
+        });
     }
 }
 function loginClick(){
-    var butt = $('.cabinet__login a');
+    var butt = $('.cabinet__login>a');
     var menu = $('.cabinet__menu-wrap');
+    if(butt.length > 0){
+        butt.click(function (e) {
+            e.preventDefault();
+            butt.toggleClass('active');
+            if(butt.hasClass('active')){
+                menu.stop().slideDown(100);
+            }else{
+                menu.stop().slideUp(100);
+            }
+        });
+
+    }
+}
+function logRegClick(){
+    var butt = $('.login-pop>a');
+    var menu = $('.login-pop__menu-wrap');
     if(butt.length > 0){
         butt.click(function (e) {
             e.preventDefault();
@@ -64,9 +86,9 @@ function paginator(){
     var pin = $('.paginator__pin');
     if(area.length > 0){
         var slides = $('.top-slider__slide-wrap').length;
-        var width = area.width() - 22;
+        var width = area.width();
         var step = parseInt(width / slides);
-        var lastX = step - step/2;
+        var lastX = 15;
         pin.css('left', lastX);
         pin = {};
         var drag = false;
@@ -86,7 +108,7 @@ function paginator(){
                 var current = lastX + moveX;
                 pin.css('left', current);
                 if(current < 10) {
-                    pin.css('left', 10);
+                    pin.css('left', 15);
                     stopDrag();
                 }else if(current > width) {
                     pin.css('left', width);
@@ -107,9 +129,8 @@ function paginator(){
         function stopPin() {
             var cur = parseInt(lastX / step);
             var set = cur*step + step/2;
-            if (set >= width){
-                set = width - step/2;
-            }
+            if (set >= width || (cur+1) >= slides) set = width - 36;
+            if (cur == 0) set=15;
             $('.paginator__pin').css('left', set);
             lastX = parseInt($('.paginator__pin').css('left'));
             $('.top-slider__wrap').slick('slickGoTo',cur);
@@ -121,19 +142,16 @@ function paginator(){
             var x = e.offsetX == undefined ? e.layerX : e.offsetX;
             var cur = parseInt(x / step);
             var set = cur*step + step/2;
-            if (set >= width){
-                set = width - step/2;
-            }
+            if (set >= width || (cur+1) >= slides) set = width - 36;
+            if (cur == 0) set=15;
             $('.paginator__pin').css('left', set);
             lastX = parseInt($('.paginator__pin').css('left'));
             $('.top-slider__wrap').slick('slickGoTo',cur);
         });
         $('.top-slider__wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
-
             var set = slick.currentSlide * step + step/2;
-            if (set >= width){
-                set = width - step/2;
-            }
+            if (set >= width || (slick.currentSlide+1) >= slides) set = width - 36;
+            if (slick.currentSlide == 0) set=15;
             $('.paginator__pin').css('left', set);
             lastX = parseInt($('.paginator__pin').css('left'));
         });
@@ -172,6 +190,7 @@ function slideActualInit() {
 $(document).ready(function(){
     autocompleteInit();
     loginClick();
+    logRegClick();
     leftMenu();
     slideInit();
     paginator();

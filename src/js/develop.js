@@ -187,6 +187,22 @@ function slideActualInit() {
         });
     }
 }
+function placeholder(){
+    var ph = $('input + .placeholder');
+    if(ph.length > 0){
+        ph.each(function () {
+            var input = $(this).prev('input');
+            var that = $(this);
+            input.blur(function (){
+                if($(this).val().length > 0){
+                    that.addClass('focus');
+                }else{
+                    that.removeClass('focus');
+                }
+            });
+        });
+    }
+}
 $(document).ready(function(){
     autocompleteInit();
     loginClick();
@@ -195,4 +211,5 @@ $(document).ready(function(){
     slideInit();
     paginator();
     slideActualInit();
+    placeholder();
 });

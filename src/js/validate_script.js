@@ -151,6 +151,8 @@ function Maskedinput(){
     }
 }
 $(document).ready(function(){
-   validate('#call-popup .contact-form', {submitFunction:validationCall});
+   validate('#popup-lost form');
+   validate('#popup-reg form');
+   validate('.login-pop__form');
    Maskedinput();
 });

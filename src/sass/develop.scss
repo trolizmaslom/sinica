@@ -238,9 +238,9 @@ input, textarea{
         }
         &__tel{ margin-left: 20px; padding-bottom: 4px;
           p{ margin: 0;}
-          a{ color: #0f0f0f; font-weight: 700; font-size:19px; display: block; padding-top: 6px; text-decoration: none; position: relative;
+          a{ color: #0f0f0f; font-weight: 700; font-family: Arial, sans-serif; font-size:19px; display: block; padding-top: 6px; text-decoration: none; position: relative;
             &:before{ content: ''; display: block; width: 100%; height: 1px; background-color: #000; left: 0; bottom:-3px; position: absolute; animation-play-state: paused; animation-name: tel; animation-duration: 2s; animation-iteration-count: infinite; opacity: 0;}
-            &:hover:before{animation-play-state: running; opacity: 1;}
+            //&:hover:before{animation-play-state: running; opacity: 1;}
           }
         }
         &__cabinet{ position: absolute; top: 44px; right: 16px; z-index: 300;}
@@ -284,7 +284,7 @@ input, textarea{
         .left-menu__wrap{animation-name: wrap; animation-duration: 600ms; animation-fill-mode:forwards;}
         .left-menu__close{animation-name: wrap; animation-duration: 600ms; animation-fill-mode:forwards; animation-delay: 300ms;}
       }
-      &__wrap{ width: 380px; position: absolute; left: -100%; top: 0; background-color: #fff; height: 100%;}
+      &__wrap{ width: 250px; position: absolute; left: -100%; top: 0; background-color: #fff; height: 100%;}
       &__close{ width: 100%; background-color: #292929; height: 36px; position: absolute; left: -100%; top: 0; z-index: 50;
         button{border:none; background: transparent; width: 36px; height: 36px; position: absolute; top: 0; right: 0;
           &:hover{
@@ -299,7 +299,7 @@ input, textarea{
       }
       &__content{ padding-top: 43px; overflow-y:auto;        height: 100%;
         ul{ list-style-type: none; width: 100%; font-family:'futura'; text-transform: uppercase; padding: 0; margin: 0;}
-        li{ border-bottom:1px solid #f6f6f6; position: relative; width: 100%; padding:0px 8px 0px 147px;   height: 43px; display: flex; justify-content: flex-start; align-items: center;}
+        li{ border-bottom:1px solid #f6f6f6; position: relative; width: 100%; padding:0px 8px 0px 17px;   height: 43px; display: flex; justify-content: flex-start; align-items: center;}
         a{ color: #292929; text-decoration: none;
           &:before{content: ''; position: absolute; right: 60px; top: 15px; width: 10px; height: 10px;border-radius: 50%; background-color: #ffea00; transition: all 100ms; opacity: 0;}
           &:hover:before{ opacity: 1; right: 20px;}
@@ -376,7 +376,7 @@ input, textarea{
     }
     &__texter{ color: #fff; position: absolute; bottom: 0; left: 0; z-index: 20; padding:27px;}
     &__txt{display: flex; justify-content: space-between;
-      span:first-child{ color: #aaa; font-weight: 200; }
+      span:first-child{ color: #aaa; font-weight: 300; font-family:Arial, sans-serif; }
       span:last-child{ color: #777; letter-spacing: 2px;
         &:hover{ text-decoration: underline;}
         }

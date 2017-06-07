@@ -16,7 +16,7 @@
 	.left-menu__content{overflow-y: scroll;}
 	.left-menu__group{ display: block;}
 	.header__nav{ display: none;}
-	.header__cabinet{ flex-direction: column-reverse; top: 10px; position: fixed;}
+	.header__cabinet{ flex-direction: column-reverse; top: 10px; position: fixed; height: auto;}
 	.cabinet__item{ margin-right: 0; margin-top: 10px;}
 	.header__telserch{ margin-right: 70px; width: auto;}
 	.header__tel{ display: none;}
@@ -67,7 +67,8 @@
 	.left-menu__wrap{ width: 100%;}
 	.left-menu__content li{    padding: 12px 8px 16px 27px;}
 	.actual__item{ width: 100%;}
+	.actual__slider{ margin: 0;}
 	.about{ padding-top: 50px;}
-	.about:before{ top: 70px; height:calc(100% - 70px);}
+	.about:before{ top: 86px; height:calc(100% - 70px);}
 	.footer__contact{ flex-direction: column; height: 85px;}
 }

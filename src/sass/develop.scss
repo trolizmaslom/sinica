@@ -233,8 +233,9 @@ input, textarea{
         &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 20px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 41px;  padding-right: 8px; z-index: 50;
             &:before{content: ''; position: absolute; background-image: url(../images/search.png); width: 16px; height: 16px; left: 11px; top: 11px;}
             input{border:none; width: 100%; font-weight: 100; color: #000; background-color: transparent;}
-            &:hover,
-            &.focus{ box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12);}
+            //&:hover,
+            //&.focus{ box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12);}
+          &.focus{ border-color: #fff;}
         }
         &__tel{ margin-left: 20px; padding-bottom: 4px;
           p{ margin: 0;}
@@ -249,7 +250,7 @@ input, textarea{
       li{ margin-bottom: 16px;}
     }
     .ui-helper-hidden-accessible{ display: none;}
-    .cabinet{ display: flex; justify-content: center; align-items: center;
+    .cabinet{ display: flex; justify-content: center; align-items: flex-start; height: 56px;
         &__menu-wrap{position: absolute; right: 0; top:calc(100% + 27px); display: none;
           &:before{content: ''; position: absolute; right: 20px; top: -6px; width: 22px; height: 22px; background-color: #fff; box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12); transform:rotate(45deg); z-index: 10;}
         }
@@ -358,7 +359,7 @@ input, textarea{
   .actual{ position: relative; overflow: hidden; padding-top: 119px;
     &:before{content: ''; background-color: #ffea00; width: 1280px; height: 393px; position: absolute; left:calc(50%  - 640px); top: 142px;}
     h2{  margin-bottom: 52px;}
-    &__slider{}
+    &__slider{ margin: 0 -10px;}
     &__slide-wrap{}
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start;}
     &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 auto;  background-color: #fff;
@@ -389,11 +390,11 @@ input, textarea{
 /*END actual*/
 
 /*about*/
-  .about{ position: relative; padding-top: 147px; padding-bottom: 126px; overflow: hidden;
+  .about{ position: relative; padding-top: 117px; padding-bottom: 80px; overflow: hidden;
     h2{ margin-bottom: 44px;}
     &:before{content: '';  position: absolute; left: 0; top: 167px; width: 100%; height: calc(100% - 167px); background-image: url(../images/dotted.jpg); background-repeat: repeat;}
     &__content{ text-align: left;
-      h6{ font-weight: 700; font-size: 18px;  line-height: 1.45; margin-bottom: 35px;}
+      h6{ font-weight: 700; font-size: 18px;  line-height: 1.45; margin-bottom: 35px; margin-top: 0;}
       p{line-height: 1.72; margin: 0 0 12px;}
     }
     &__left{ max-width: 555px; width: 100%; padding-right: 30px; float: left;}
@@ -403,7 +404,7 @@ input, textarea{
   }
 /*END about*/
 /*footer*/
-  .copyright{ background-color: #3d3d3d; font-weight: 300; text-align: center; height: 60px; display: flex; justify-content: center; align-items: center; color: #fff;}
+  .copyright{ background-color: #3d3d3d; font-weight: 300; text-align: center; height: 60px; display: flex; justify-content: center; align-items: center; color: #ccc;}
   .footer{ background-color: #000; color: #fff;
     &__wrap{ display: flex; justify-content: space-between; align-items: flex-end; padding: 30px 0 40px;}
     &__nav{ width: 566px; display: flex; justify-content: flex-start;
@@ -443,4 +444,5 @@ input, textarea{
       }
     }
   }
+  .numeric{ font-family:'Arial';}
 /*END footer*/

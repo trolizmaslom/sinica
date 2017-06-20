@@ -70,6 +70,7 @@ function leftMenu(){
 }
 function slideInit() {
     var slider = $('.top-slider__wrap');
+
     if(slider.length > 0){
         slider.slick({
             dots: false,
@@ -160,8 +161,39 @@ function paginator(){
 }
 function slideActualInit() {
     var slider = $('.actual__slide');
+        
     if(slider.length > 0){
         slider.slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            speed: 500,
+            responsive: [
+                {
+                    breakpoint: 1116,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 760,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+    
+}
+function slideRecomendlInit() {
+    var slide2 = $('.recomend__slider-wrap');
+    if(slide2.length > 0){ 
+        slide2.slick({
             dots: true,
             arrows: false,
             infinite: false,
@@ -212,4 +244,5 @@ $(document).ready(function(){
     paginator();
     slideActualInit();
     placeholder();
+    slideRecomendlInit();
 });

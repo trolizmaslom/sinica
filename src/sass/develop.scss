@@ -446,3 +446,290 @@ input, textarea{
   }
   .numeric{ font-family:'Arial';}
 /*END footer*/
+/*START new page*/
+.crambs{
+  ul{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    flex-direction: row;
+    margin: 20px 0;
+    a{
+      text-decoration: none;
+      color: #575757;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      font-family: 'Raleway-ExtraLight';
+    }
+    li:last-child{
+      a{
+        font-family: 'Raleway-Bold';
+        font-weight: bold;
+      }
+      &:after{
+        content: '';
+      }
+    }
+    li{
+      padding-right: 16px;
+      margin-right: 8px;
+      position: relative;
+      &:after{
+        content: "/";
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 0;
+      }
+    }
+  }
+}
+.product{
+  font-family: Arial;
+  &__wrap{
+    padding: 85px 0 42px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__left{
+    width: 49%;
+  }
+  &__right{
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .button span{
+      width: 182px;
+    }
+  }
+  &__title{
+    margin: 0;
+    line-height: 28px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    span{
+      text-transform: initial;
+    }
+  }
+  &__subtitle{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 9px 0 27px;
+    letter-spacing: -0.9px;
+  }
+  h4{
+    margin: 20px 0 13px;
+    letter-spacing: -0.5px;
+  }
+  p{
+    color: #808080;
+    font-size: 12px;
+    margin-bottom: 26px;
+    max-width: 530px;
+    line-height: 1.5;
+  }
+  &__price{
+    font-size: 22px;
+    color: #191919;
+    span{
+      font-size: 36px;
+      font-weight: bold;
+      padding-left: 7px;
+      letter-spacing: 3px;
+    }
+    .button{
+      span{
+        width: 180px;
+      }
+    }
+  }
+}
+.table{
+  .wrap-table{
+    border: 1px solid  #c0c0c0;
+    border-bottom: none;
+  }
+  &__row{
+    line-height: 50px;
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid  #c0c0c0;
+    >div:nth-child(odd){
+      background-color: #f2f2f2;
+    }
+    >div:nth-child(even){
+      background-color: #e6e6e6;
+    }
+    >*{
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Arial;
+
+    }
+    .button{
+      span{
+        font-weight: 400;
+        font-size: 13px;
+        width: 120px;
+        height: 35px;
+        box-shadow: none;
+      }
+      span:before{
+        content: 'у кошик';
+        display: block;
+      }
+      .is-checked:before{
+        content: 'у кошику';
+        display: block;
+      }
+    }
+  }
+  &__place{
+    width: 58%;
+    padding: 0 25px; 
+  }
+  &__number{
+    width: 8%;
+    padding: 0px 0 0 29px;
+  }
+  &__price{
+    width: 14%;
+    padding: 0px 0 0 39px;
+  }
+  &__button{
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__buttons{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-end;
+    padding: 40px 0;
+  }
+}
+.table{
+  &__row:hover{
+    line-height: 59px;
+    height: 60px;
+    >div:nth-child(odd){
+      background-color: #dddddd;
+    }
+    >div:nth-child(even){
+      background-color: #c0c0c0;
+    }
+  }
+}
+.button span.button_oreder, .button span.button_search{
+  width: 250px;
+  font-size: 17px;
+  margin-left: 44px;
+}
+.recomend{
+  padding-bottom: 230px;
+  position: relative;
+  &:before{
+    content: '';
+    background-color: #f2f2f2;
+    width: 1280px;
+    height: 393px;
+    position: absolute;
+    left: calc(50% - 640px);
+    top: 23px;
+  }
+  h2{
+    margin-top: 3px;
+    letter-spacing: -1.1px;
+  }
+  &__slider-wrap{
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+  &__slide-wrap{
+    // width: 31.5%;
+    max-width: 365px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__slide{
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #c6c6c6;
+    background-color: #fff;
+  }
+  &__img{
+    height: 205px; 
+  }
+  &__title{
+    font-family: 'Raleway';
+    font-size: 24px;
+    text-align: left;
+    width: 100%;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+    margin-top: 12px;
+  }
+  &__subtitle{
+    font-size: 11px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding-bottom: 18px;
+  }
+  &__price{
+    padding-top: 18px;
+    color: #bfbfbf;
+    font-size: 24px;
+    font-family: Arial;
+    text-align: left;
+    width: 100%;
+    span{
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 9px;
+    }
+  }
+  .detal{
+    margin-top: 22px;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color: #333333;
+    cursor: pointer;
+  }
+}
+.recomend .slick-dots {
+  bottom: auto;
+  top: -76px;
+  right: 8px;
+  text-align: right;
+}
+.recomend .slick-dots li {
+  width: 12px;
+  height: 12px;
+}
+.recomend .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.recomend .slick-dots li.slick-active button {
+    background-color: #000;
+}

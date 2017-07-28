@@ -47,10 +47,13 @@ function logRegClick(){
 
     }
 }
+//menuMob
+var menu = $('.left-menu');
+var butt = $('.header__butter-button');
 function leftMenu(){
-    var butt = $('.header__butter-button');
     var close = $('.left-menu__close button');
-    var menu = $('.left-menu');
+    var layer = $('.js-layer-close');
+    var body = $('body');
     if(butt.length > 0){
         butt.click(function (e) {
             e.preventDefault();
@@ -61,13 +64,16 @@ function leftMenu(){
                 menu.removeClass('open');
             }
         });
-        close.click(function (e) {
-            e.preventDefault();
-            butt.removeClass('active');
-            menu.removeClass('open');
-        })
+        close.click(closeMenuMob)
+        layer.click(closeMenuMob)
     }
 }
+function closeMenuMob(e){
+    e.preventDefault();
+    butt.removeClass('active');
+    menu.removeClass('open');
+}
+//menuMob end
 function slideInit() {
     var slider = $('.top-slider__wrap');
 

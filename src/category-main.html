@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
+    <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="global-wrapper">
+	<!-- HEADER -->
+	<header>
+	    <div class="header">
+	        <div class="header__butter">
+	            <div class="header__butter-button" title="Меню"><span></span></div>
+	            <div class="left-menu">
+	                <div class="left-menu__wrap">
+	                    <div class="left-menu__close"><button><span></span><span></span></button></div>
+	                    <div class="left-menu__content">
+	                        <div class="left-menu__group">
+	                            <ul>
+	                                <li><a href="#">Медикаменти</a></li>
+	                                <li><a href="#">Лікувальна косметика</a></li>
+	                                <li><a href="#">Мама та маля</a></li>
+	                                <li><a href="#">Особиста гігієна</a></li>
+	                                <li><a href="#">Медичні товари</a></li>
+	                                <li><a href="#">Вітаміни. Бади. Трави</a></li>
+	                            </ul>
+	                        </div>
+	                        <div class="left-menu__main">
+	                            <ul>
+	                                <li><a href="#">Новини</a></li>
+	                                <li><a href="#">Блог</a></li>
+	                                <li><a href="#">Робота у нас</a></li>
+	                                <li><a href="#">Пропозиції</a></li>
+	                                <li><a href="#">Календар подій</a></li>
+	                                <li><a href="#">Тематика місяця</a></li>
+	                                <li><a href="#">Бонусна програма</a></li>
+	                                <li><a href="#">Резерв та замовлення</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="layer js-layer-close"></div>
+	            </div>
+	        </div>
+	        <div class="header__main">
+	            <div class="mbox">
+	                <div class="header__row">
+	                    <a href="#" class="header__logo"><img src="images/logo.png" alt=""></a>
+	                    <div class="header__telserch">
+	                        <div class="header__search" title="Пошук">
+	                            <input type="text" placeholder="Знайди потрібне" id="search">
+	                        </div>
+	                        <div class="header__tel">
+	                            <p>Зателефонуй нам:</p>
+	                            <p><a href="tel:0 (800) 30 18 18">0 (800) 30 18 18</a></p>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="header__nav">
+	                    <ul>
+	                        <li><a href="#">Медикаменти</a></li>
+	                        <li><a href="#">Лікувальна косметика</a></li>
+	                        <li><a href="#">Мама та маля</a></li>
+	                        <li><a href="#">Особиста гігієна</a></li>
+	                        <li><a href="#">Медичні товари</a></li>
+	                        <li><a href="#">Вітаміни. Бади. Трави</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	
+	        </div>
+	        <div class="header__cabinet cabinet">
+	            <div class="cabinet__item" title="Карта аптек"><a href="#"  ><span class="cabinet__market" ></span></a></div>
+	            <div class="cabinet__item" title="Корзина"><a href="#"  ><span class="cabinet__basket" ></span></a></div>
+	            <div class="cabinet__item login-pop" title="Особистий кабінет"><a href="#"  ><span class="cabinet__user"  ></span></a>
+	                <div class="login-pop__menu-wrap">
+	                    <div class="login-pop__menu">
+	                        <div class="login-pop__title"><span>Вхід в особистий кабінет</span></div>
+	                        <div class="login-pop__content">
+	                            <form action="ajax.php" class="login-pop__form">
+	                                <div class="form_row">
+	                                    <div class="form_input">
+	                                        <input type="email" name="contact_mail" required="required" value="" placeholder="Введи E-mail">
+	                                    </div>
+	                                </div>
+	                                <div class="form_row">
+	                                    <div class="form_input">
+	                                        <input type="password" name="contact_pass" required="required" value="" placeholder="Пароль">
+	                                    </div>
+	                                </div>
+	                                <div class="form_row form_row--between">
+	                                    <label><input type="checkbox"><i></i><span>Запам’ятай мене</span></label>
+	                                    <a data-fancybox href="javascript:;" data-src="#popup-lost">Забули пароль?</a>
+	                                </div>
+	                                <div class="form_row">
+	                                    <button class="button button--reverse"><span>Вхід</span></button>
+	                                </div>
+	                            </form>
+	                            <div class="login-pop__socials">
+	                                <h6>Зайди через соц мережі:</h6>
+	                                <p>
+	                                    <a href="#" class="icon icon--white"><span><img src="images/ic6-w.png" alt=""></span></a>
+	                                    <a href="#" class="icon icon--white"><span><img src="images/ic7-w.png" alt=""></span></a>
+	                                    <a href="#" class="icon icon--white"><span><img src="images/ic8-w.png" alt=""></span></a>
+	                                </p>
+	                            </div>
+	                        </div>
+	                        <div class="login-pop__register"><a data-fancybox href="javascript:;" data-src="#popup-reg">Зареєструватися</a></div>
+	                    </div>
+	                </div>
+	            </div>
+	
+	            <div class="cabinet__login"  style="display: none;">
+	                <a href="#"><img src="images/ava.png" alt=""></a>
+	                <div class="cabinet__menu-wrap">
+	                    <div class="cabinet__menu">
+	                        <ul>
+	                            <li><a href="#">Мій профіль</a></li>
+	                            <li><a href="#">Вихід</a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<!-- /HEADER -->
+	<div class="main">
+		<div class="mbox mbox_catalog">
+			<div class="crambs">
+				<ul>
+					<li><a href="#">Головна</a></li>
+					<li><a href="#">Медикаменти</a></li>
+					<li><a href="#">Для судин</a></li>
+					<li><a href="#">Для зниження холестирину</a></li>
+				</ul>
+			</div>
+			<div class="main__col">
+				<div class="main__col-left">
+					<div class="wrap-sidebar">
+						<div class="sidebar__title-category">Для зниження холестирину</div>
+						<div class="sidebar__box">
+	            <form>
+	              <div class="filter">
+	                <h1 class="filter__title"> Торгова марка</h1>
+	                <div class="filter__inputs-wrap">
+	                  <div class="filter__inputs js-custom-scroll">
+	                    <p>
+	                      <input type="checkbox" id="brend1" name="brend1">
+	                      <label for="brend1">Vichy</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend2" name="brend2">
+	                      <label for="brend2">La roshe posay</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend3" name="brend3">
+	                      <label for="brend3">Pharmatheiss cosmetics</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend4" name="brend4">
+	                      <label for="brend4">Doliva</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend5" name="brend5">
+	                      <label for="brend5">Pampers</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend6" name="brend6">
+	                      <label for="brend6">Pampers</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend7" name="brend7">
+	                      <label for="brend7">Pharmatheiss cosmetics</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend8" name="brend8">
+	                      <label for="brend8">La roshe posay</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend9" name="brend9">
+	                      <label for="brend9">Pampers</label>
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </form>
+	          </div>
+	        
+	        	<div class="sidebar__box">
+	            <form>
+	              <div class="filter">
+	                <h1 class="filter__title">Країна виробник:</h1>
+	                <div class="filter__inputs-wrap">
+	                  <div class="filter__inputs js-custom-scroll">
+	                    <p>
+	                      <input type="checkbox" id="brend1" name="brend1">
+	                      <label for="brend1">Україна</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend2" name="brend2">
+	                      <label for="brend2">Польща</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend3" name="brend3">
+	                      <label for="brend3">Німеччина</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend4" name="brend4">
+	                      <label for="brend4">Китай</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend5" name="brend5">
+	                      <label for="brend5">Франція</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend6" name="brend6">
+	                      <label for="brend6">Pampers</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend7" name="brend7">
+	                      <label for="brend7">cosmetics</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend8" name="brend8">
+	                      <label for="brend8">Pampers</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend9" name="brend9">
+	                      <label for="brend9">Pampers</label>
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </form>
+	          </div>
+	          <div class="sidebar__box">
+	            <form>
+	              <div class="filter">
+	                <h1 class="filter__title">Вид:</h1>
+	                <div class="filter__inputs-wrap">
+	                  <div class="filter__inputs js-custom-scroll">
+	                    <p>
+	                      <input type="checkbox" id="brend1" name="brend1">
+	                      <label for="brend1">Аюрведичні</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend2" name="brend2">
+	                      <label for="brend2">Органічні</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend3" name="brend3">
+	                      <label for="brend3">Натуральні</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend4" name="brend4">
+	                      <label for="brend4">Рослинні</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend5" name="brend5">
+	                      <label for="brend5">Гомеопатичні</label>
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </form>
+	          </div>
+	          <div class="sidebar__box">
+	            <form>
+	              <div class="filter">
+	                <h1 class="filter__title">Форма випуску:</h1>
+	                <div class="filter__inputs-wrap">
+	                  <div class="filter__inputs js-custom-scroll">
+	                    <p>
+	                      <input type="checkbox" id="brend1" name="brend1">
+	                      <label for="brend1">Ампули</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend2" name="brend2">
+	                      <label for="brend2">Таблетки</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend3" name="brend3">
+	                      <label for="brend3">Мазь</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend4" name="brend4">
+	                      <label for="brend4">Крем</label>
+	                    </p>
+	                    <p>
+	                      <input type="checkbox" id="brend5" name="brend5">
+	                      <label for="brend5">Спрей</label>
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </form>
+	          </div>
+	        </div>
+				</div>
+				<div class="main__col-right">
+					<div class="catalog">
+						<div class="catalog__nav">
+							<div class="catalog__nav-filter">
+								<div class="catalog__nav-title">
+									Сортувати по:
+									<a href="#">Ціна</a>
+									<a href="#">Назва</a>
+								</div>
+								<div class="catalog__nav-arrow">
+									<a href="#" class="nav-arrow nav-arrow_top"></a>
+									<a href="#" class="nav-arrow nav-arrow_bot"></a>
+								</div>
+							</div>
+							<div class="catalog__nav-pages">
+								<a href="#">1</a>
+								<a href="#" class="active">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">...</a>
+								<a href="#">30</a>
+							</div>
+						</div>
+						<div class="catalog__items-wrap">
+							<a href="#" class="item-prod good-price">
+								<div class="item-prod__img">
+									<img src="./images/prod1.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Пантенол (мазь) 30г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 71.42 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod2.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Метаклопрамід 10г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 35.42 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod action">
+								<div class="item-prod__img">
+									<img src="./images/prod3.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Ентерол (порошок) 250г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 99.50 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod5.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Пантенол (спрей) 130г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 168,67 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod4.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Нурофен (таблетки) 200г</h4>
+									<div class="item-prod__subtitle">
+										Reckitt Benckiser Healthcare Internatio...
+									</div>
+									<div class="item-prod__price">від 64,71 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod sale">
+								<div class="item-prod__img">
+									<img src="./images/prod6.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Саліцилова паста 25г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 6,43 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod good-price">
+								<div class="item-prod__img">
+									<img src="./images/prod1.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Пантенол (мазь) 30г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 71.42 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod2.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Метаклопрамід 10г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 35.42 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod action">
+								<div class="item-prod__img">
+									<img src="./images/prod3.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Ентерол (порошок) 250г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 99.50 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod5.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Пантенол (спрей) 130г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 168,67 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod ">
+								<div class="item-prod__img">
+									<img src="./images/prod4.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Нурофен (таблетки) 200г</h4>
+									<div class="item-prod__subtitle">
+										Reckitt Benckiser Healthcare Internatio...
+									</div>
+									<div class="item-prod__price">від 64,71 грн.</div>
+								</div>
+							</a>
+							<a href="#" class="item-prod sale">
+								<div class="item-prod__img">
+									<img src="./images/prod6.png">
+								</div>
+								<div class="item-prod__info">
+									<h4 class="item-prod__title">Саліцилова паста 25г</h4>
+									<div class="item-prod__subtitle">
+										Hemofarm (Сербия)
+									</div>
+									<div class="item-prod__price">від 6,43 грн.</div>
+								</div>
+							</a>
+						</div>
+						<div class="catalog__nav_footer">
+							<a href="#" class="button" tabindex="0"><span>Більше товарів</span></a>
+							<div class="catalog__nav-pages">
+								<a href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">...</a>
+								<a href="#">30</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hidden-block">
+		
+		    <div id="call_success">
+		        <div class="call-success">
+		             <div class="call_success">
+		                 <div class="call-title">Спасибо за заявку!</div>
+		                 <div class="call-subtitle">Мы свяжемся с Вами в ближайшее время</div>
+		             </div>
+		        </div>
+		    </div>
+		    <div class="popup popup-lost" id="popup-lost">
+		        <div class="popup__title"><span>Приєднуйся до нас</span></div>
+		        <div class="popup__content popup-lost__content">
+		            <div class="popup__form">
+		                <form action="ajax.php">
+		                    <div class="form_row form_row--center">
+		                        <div class="form_input ">
+		                            <input type="email" name="contact_email" required="required" value="" >
+		                            <div class="placeholder">E-mail<i>*</i></div>
+		                        </div>
+		                    </div>
+		                    <div class="form_row form_row--center">
+		
+		                        <div class="form_input  popup-lost__button">
+		                            <button class="button button--reverse"><span>Надіслати</span></button>
+		                        </div>
+		                    </div><div class="form_row form_row--center">
+		                        <div class="form_input popup-reg__text">
+		                            <p>Введи адресу електронної пошти, яку ти використовував при реєстрації та ми надішлемо тобі інструкції щодо скидання пароля..</p>
+		                        </div>
+		                    </div>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
+		
+		    <div class="popup popup-reg" id="popup-reg">
+		        <div class="popup__title"><span>Приєднуйся до нас</span></div>
+		        <div class="popup__content">
+		            <div class="popup__form">
+		                <form action="ajax.php">
+		                    <div class="form_row form_row--between-reg">
+		                        <div class="form_input">
+		                            <input type="text" name="contact_name" required="required" value="" >
+		                            <div class="placeholder">Ім’я <i>*</i></div>
+		                        </div>
+		                        <div class="form_input">
+		                            <input type="text" name="contact_surname" required="required" value="">
+		                            <div class="placeholder">Прізвище<i>*</i></div>
+		                        </div>
+		                    </div>
+		                    <div class="form_row form_row--between-reg">
+		                        <div class="form_input ">
+		                            <input type="email" name="contact_email" required="required" value="" >
+		                            <div class="placeholder">E-mail<i>*</i></div>
+		                        </div>
+		                        <div class="form_input">
+		                            <input type="text" name="contact_tel" value="" required="required" class="tel-mask">
+		                            <div class="placeholder">Телефон</div>
+		                        </div>
+		                    </div>
+		                    <div class="form_row form_row--between-reg">
+		                        <div class="form_input">
+		                            <input type="password" name="pass" required="required" value="" >
+		                            <div class="placeholder">Пароль<i>*</i></div>
+		                        </div>
+		                        <div class="form_input">
+		                            <input type="password" name="repass" value="" required="required">
+		                            <div class="placeholder">Повтори пароль<i>*</i></div>
+		                        </div>
+		                    </div>
+		                    <div class="form_row form_row--between-reg">
+		                        <div class="form_input popup-reg__text">
+		                            <p>Поля які позначені <i>*</i>, є обов’язковими <br>
+		                                для заповнення</p>
+		                        </div>
+		                        <div class="form_input popup-reg__button">
+		                            <button class="button button--reverse"><span>Зареєструватися</span></button>
+		                        </div>
+		                    </div>
+		                </form>
+		            </div>
+		        </div>
+		        <div class="popup__social">
+		            <a href="#" class="icon icon--white icon--bh"><span><img src="images/ic6-w.png" alt=""></span></a>
+		            <a href="#" class="icon icon--white icon--bh"><span><img src="images/ic7-w.png" alt=""></span></a>
+		            <a href="#" class="icon icon--white icon--bh"><span><img src="images/ic8-w.png" alt=""></span></a>
+		        </div>
+		    </div>
+		
+		</div>
+		 <!-- FOOTER -->
+		 <div class="footer_placeholder"></div>
+		 <footer class="footer">
+		     <div class="mbox">
+		         <div class="footer__wrap">
+		             <div class="footer__nav">
+		                 <div class="footer__col">
+		                     <a href="">Медикаменти</a>
+		                     <a href="#">Лікувальна косметика</a>
+		 
+		                 </div>
+		                 <div class="footer__col">
+		                     <a href="#">Мама та маля</a>
+		                     <a href="#">Особиста гігієна</a>
+		 
+		                 </div>
+		                 <div class="footer__col">
+		                     <a href="#">Медичні товари</a>
+		                     <a href="#">Вітаміни. Бади. Трави</a>
+		                 </div>
+		             </div>
+		             <div class="footer__contact">
+		                 <a href="tel:0 (800) 30 18 18" class="icon icon--nohover numeric"><span><img src="images/ic4.png" alt=""></span><span>0 (800) 30 18 18</span></a>
+		                 <a href="mailto:dovidka@hmpa.com.ua" class="icon icon--nohover"><span><img src="images/ic5.png" alt=""></span><span>dovidka@hmpa.com.ua</span></a>
+		             </div>
+		             <div class="footer__social">
+		                 <div class="footer__social-row">
+		                     <span>Синиця в соц. :</span>
+		                 </div>
+		                 <div class="footer__social-row">
+		                     <a href="#" class="icon"><span><img src="images/ic6.png" alt=""></span></a>
+		                     <a href="#" class="icon"><span><img src="images/ic7.png" alt=""></span></a>
+		                     <a href="#" class="icon"><span><img src="images/ic8.png" alt=""></span></a>
+		                 </div>
+		             </div>
+		         </div>
+		     </div>
+		 
+		     <div class="copyright"><span>© <span class="numeric">2017</span> Синиця аптека</span></div>
+		 </footer>
+		 <!-- FOOTER -->
+		 <script>
+		         var availableTags = [
+		             "ActionScript",
+		             "AppleScript",
+		             "Asp",
+		             "BASIC",
+		             "C",
+		             "C++",
+		             "Clojure",
+		             "COBOL",
+		             "ColdFusion",
+		             "Erlang",
+		             "Fortran",
+		             "Groovy",
+		             "Haskell",
+		             "Java",
+		             "JavaScript",
+		             "Lisp",
+		             "Perl",
+		             "PHP",
+		             "Python",
+		             "Ruby",
+		             "Scala",
+		             "Scheme"
+		         ];
+		 </script>
+		 
+		 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+		 <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		 <link rel="stylesheet" href="css/formstyler.css">
+		 <link rel="stylesheet" href="css/normalize.css">
+		 <link rel="stylesheet" href="css/slick-theme.css">
+		 <link rel="stylesheet" href="css/slick.css">
+		 <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+		 <link rel="stylesheet" href="css/develop2.css">
+		 <link rel="stylesheet" href="css/develop.css">
+		 <link rel="stylesheet" href="css/adaptation.css">
+		 
+		 <!-- SCRIPTS -->
+		 <script        src="https://code.jquery.com/jquery-3.1.1.min.js"        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="        crossorigin="anonymous"></script>
+		 <script type="text/javascript" src="js/validate_script.js" ></script>
+		 <script src="js/plagins/jquery-ui.js"></script>
+		 
+		 <!-- build:js -->
+		 <script type="text/javascript" src="js/plagins/device.js" ></script>
+		 <script type="text/javascript" src="js/plagins/jquery.fancybox.min.js" ></script>
+		 <script type="text/javascript" src="js/plagins/jquery.formstyler.min.js" ></script>
+		 <script type="text/javascript" src="js/plagins/jquery.validate.min.js" ></script>
+		 <script type="text/javascript" src="js/plagins/maskInput.js" ></script>
+		 <script type="text/javascript" src="js/plagins/jquery.mCustomScrollbar.js" ></script>
+		 <script type="text/javascript" src="js/plagins/slick.js" ></script>
+		 <script type="text/javascript" src="js/plagins/object-fit-cover.js" ></script>
+		 <script type="text/javascript" src="js/basic_scripts.js" ></script>
+		 <script type="text/javascript" src="js/develop.js" ></script>
+		 
+		 <!-- endbuild -->
+		 
+		 <!-- /SCRIPTS -->
+</div>
+</body>
+</html>

@@ -895,7 +895,9 @@ input[type="checkbox"]:checked+label:before {
     height: 18px;
 }
 .wrap-sidebar{border-right: 1px solid #c6c6c6;}
-.sidebar{padding-bottom: 15px;}
+.sidebar{padding-bottom: 15px;
+  &__title-category{  font-size: 20px; font-weight: 600; padding-right: 20px;}
+}
 .sidebar__box{border: 1px solid #c6c6c6;    margin-top: 35px;   max-width: 235px;}
 .filter{  padding-left: 15px;
   &__title{ letter-spacing: -0.7px; font-size: 20px;     margin: 14px 0 18px; font-weight: 600;}

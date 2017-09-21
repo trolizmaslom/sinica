@@ -826,9 +826,8 @@ input, textarea{
   &__inner-text{position: absolute; font-family: "Raleway";  top: 26%; left: 18%;}
   &__text{    font-size: 27px; font-weight: bold; text-transform: uppercase}
 }
-.suggest-nav{
-      margin-left: -40px;
-    margin-right: -40px;
+.suggest-nav-wrap{margin-left: -40px; padding: 40px 0;   margin-right: -40px;}
+.suggest-nav{    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -864,4 +863,50 @@ input, textarea{
     opacity: 1;
     bottom: -2px;
   }
+}
+input[type=checkbox] {
+    display: none;
+}
+.filter input[type=checkbox]+label {
+    font-size: 12px;
+    padding-left: 42px;
+}
+input[type=checkbox]+label {
+    padding-left: 32px;
+    position: relative;
+    color: #333;
+    font-weight: 400;
+    font-size: 13px;
+    cursor: pointer;
+}
+input[type=checkbox]+label:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: -3px;
+    width: 23px;
+    height: 23px;
+    border: #cbcfd5 solid 1px;
+    box-sizing: border-box;
+}
+input[type="checkbox"]:checked+label:before {
+    background: url(../images/checked.png) no-repeat center;
+    width: 18px;
+    height: 18px;
+}
+.wrap-sidebar{border-right: 1px solid #c6c6c6;}
+.sidebar{padding-bottom: 15px;}
+.sidebar__box{border: 1px solid #c6c6c6;    margin-top: 35px;   max-width: 235px;}
+.filter{  padding-left: 15px;
+  &__title{ letter-spacing: -0.7px; font-size: 20px;     margin: 14px 0 18px; font-weight: 600;}
+  &__inputs{
+    p{     padding: 6px 0 25px; margin: 0; font-size: 12px;
+      &:last-child{padding-bottom: 7px;}}
+  }
+}
+.filter__inputs-wrap {
+    margin-bottom: 22px;
+}
+.filter .mCustomScrollBox {
+    height: 198px;
 }

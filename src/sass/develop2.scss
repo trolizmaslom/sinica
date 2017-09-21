@@ -2350,8 +2350,7 @@ header {
   width: calc(100% - 265px);
   padding-left: 30px; }
 
-.sidebar {
-  border-right: 1px solid #c6c6c6; }
+
   .sidebar__title {
     font-size: 18px;
     margin: 0;
@@ -2363,7 +2362,8 @@ header {
     margin: 0; }
   .sidebar__item {
     list-style-type: none;
-    padding-bottom: 22px; }
+    padding-bottom: 22px; 
+    padding-right: 10px;}
     .sidebar__item:last-child {
       padding-bottom: 0px; }
     .sidebar__item a {

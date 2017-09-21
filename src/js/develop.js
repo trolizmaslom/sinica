@@ -321,6 +321,11 @@ var tabsCange = (function (){
     });
 
 })();
+$(window).on("load",function(){
+  $(".js-custom-scroll").mCustomScrollbar({
+    "theme" : "dark-2"
+    });
+});
 $(document).ready(function(){
     autocompleteInit();
     loginClick();

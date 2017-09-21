@@ -826,3 +826,42 @@ input, textarea{
   &__inner-text{position: absolute; font-family: "Raleway";  top: 26%; left: 18%;}
   &__text{    font-size: 27px; font-weight: bold; text-transform: uppercase}
 }
+.suggest-nav{
+      margin-left: -40px;
+    margin-right: -40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 3px 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    min-height: 60px;
+  &__item{ flex-grow: 1; max-width: 165px;text-align: center;  border-right: 1px solid #8d8d8d}
+  &__item:last-child{border-right: none;}
+  &__item-link{color: #1a1a1a; position: relative; text-decoration: none; height: 40px;  justify-content: center;  display: flex;  align-items: center;}
+  &__item-link:before {
+    content: '';
+    position: absolute;
+    left: -webkit-calc(50% - 4px);
+    left: -moz-calc(50% - 4px);
+    left: calc(50% - 4px);
+    bottom: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffea00;
+    opacity: 0;
+    transition: all 100ms;}
+  &__item-link:hover:before {
+    opacity: 1;
+    bottom: -2px;}
+  &__item-link.active{
+    font-weight: 600;
+  }
+  &__item-link.active:before{
+    opacity: 1;
+    bottom: -2px;
+  }
+}

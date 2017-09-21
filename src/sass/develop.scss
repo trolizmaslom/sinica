@@ -734,3 +734,95 @@ input, textarea{
 .recomend .slick-dots li.slick-active button {
     background-color: #000;
 }
+.btn-tabs{ letter-spacing: 1px; position: relative; display: block; color: #a6a6a6; text-decoration: none; text-transform: uppercase; border: 1px solid #a6a6a6; text-align: center; font-weight: bold; font-size: 18px; padding: 15px; width: 33.33%}
+.btn-tabs:not(:first-child){ border-left: none}
+.flex-row{display: flex; flex-direction: row; align-items: center;}
+.btn-tabs.active{background: #ffea00; border-color: transparent; color: #fff;
+.tabs-circle{&:before{
+  background: #fff;
+}}
+}
+.btn-tabs.active:after{content:''; display: block; position: absolute; right: -11px; top:-1px; width: 0; height: 0; border-style: solid; border-width: 25px 0 25px 10px; border-color: transparent transparent transparent #ffea00;}
+.wrap-basket-steps{ padding: 69px 0px; }
+.tabs-circle{position: relative;  padding-left: 15px;
+&:before{content:''; background: #a6a6a6; border-radius: 50%; height: 5px; width: 5px;  position: absolute; left:0; top: 50%; transform: translateY(-50%);}
+}
+.basket{
+  &__container{    text-align: center;    padding: 50px 0 0;  }
+  &__tabs_item.active{display: block}
+  &__tabs_item{display: none;}
+  &__tabs_body{    border: 1px solid #c6c6c6;  }
+  &__summary{width: 410px;     margin-top: 25px;}
+  &__tabs_footer{display: flex; flex-direction: column; justify-content: end; align-items: flex-end; margin-top: 50px;}
+  &__title{font-size: 20px;font-weight: 600;    margin-bottom: 20px;}
+  &__summary{border: 1px solid #dadada;     margin-bottom: 35px;} 
+  &__summary-inner{ padding: 30px 50px;  justify-content: space-between; background: #f2f2f2; border-top: 1px solid #dadada; display: flex; align-items: center; }
+  &__summary-title{font-size: 18px;    padding: 20px 0;  letter-spacing: 1px;}
+  &__summary-col{font-size: 14px; font-weight: bold; font-family: Arial;
+    span{    font-weight: 300;  margin-left: 5px;}
+  }
+  &__person{padding-left: 30px; padding-top: 5px; position: relative; font-size: 22px; font-weight: bold; }
+  &__person:before{content: ''; position: absolute; left: 6px; bottom: 3px; width: 10px; height: 10px; border-radius: 50%; background-color: #ffea00; }
+  &__number{font-family: Arial; padding-top: 13px; text-align: left; padding-left: 31px; color: #a6a6a6}
+  &__box{ display: flex;  padding: 55px 0;  flex-direction: row;    justify-content: center;
+    dd{margin: 0 auto 25px; max-width: 370px; position: relative; display: block;
+        &:last-child{ margin-bottom: 10px;}
+      }
+    dl{margin: 45px 0 0;}
+  }
+  &__box-left, &__box-right{ width: 50%;}
+  &__box-right{ border-left: 1px dashed #c6c6c6}
+  &__box-title{font-size: 20px;    font-weight: 600;}
+  &__inputs-text{ pointer-events:none;  position: absolute; color: #333; z-index: 2; top: 17px; left: 17px;
+    span{    color: #f64f5f;}
+  }
+  &__empty.hidden{display: none;}
+  &__empty{    padding: 80px;}
+  &__empty-note{ color: #666666;  margin-top: 37px;  font-size: 16px;}
+  &__input{ z-index: 1; width: 100%; max-width: 370px;border: 1px solid #c6c6c6; padding: 16px; border-radius: 30px;}
+}
+.btable{
+  &__callback{width: 100%; padding: 20px 20px 30px; resize: none; font-size: 12px; color: #a6a6a6; border-color: #ececec;}
+  &__callback::placeholder{color:#a6a6a6; font-size: Arial;}
+  &__col-right{ display: flex;    padding-top: 10px;
+    .basket__summary-col{margin-left: 10px;}
+  }
+  &__row_header{ display: flex; flex-direction: row;  justify-content: space-between;}
+  &__select{    margin-top: 25px;
+    .jq-selectbox__select-text{font-size: 12px;    height: 40px; line-height: 40px;}
+    .jq-selectbox{min-width: 320px;}
+    .jq-selectbox__trigger{ border-left: none;}
+    .jq-selectbox__select{border: none; background: #f2f2f2; border-radius: 0; height: 40px; padding: 0 45px 0 20px;}
+    .jq-selectbox.focused .jq-selectbox__select{    border: 1px solid #a4a6a7;}
+    .jq-selectbox__trigger-arrow{    top: 17px; right: 16px;}
+  }
+  &__input{ max-width: 24px; height: 28px; width: 100%; border: 1px solid #c6c6c6; line-height: 28px;  font-size: 12px;  font-family: Arial;  padding: 0 7px;  font-weight: 300;  color: #40434e;}
+  &__numb{ font-family: Arial; color: #747474;}
+  &__name, &__col-title{ color: #0d0d0d; font-family: Arial; font-size: 14px;}
+  &__img{ border: 1px solid #c6c6c6; margin: 0 35px 0px 25px;}
+  &__row{ position: relative; display: flex; flex-direction: row; align-items: stretch; margin: 60px 60px 0; padding-bottom: 60px;}
+  &__row:not(:last-child){ border-bottom: 1px dashed #d4d4d4; }
+  &__col{ min-width: 163px; display: flex; flex-direction: column; align-items: center; justify-content: space-between;}
+  &__col-inner{ color: #747474; font-size: 12px; font-family: Arial;}
+  &__col:not(:first-child){ border-left: 1px solid #c6c6c6;}
+  &__col_1{width: 52%; max-width: 529px; display: flex; flex-direction: row; text-align: left; justify-content: flex-start; align-items: start;}
+  &__input--center{position: relative;   padding-right: 15px;}
+  &__count-plus{cursor: pointer; width: 0;height: 0;border-style: solid;border-width: 0 7.5px 7px 7.5px;border-color: transparent transparent #a6a6a6 transparent; position: absolute; right: -8px; top: 5px;}
+  &__count-minus{cursor: pointer; width: 0;height: 0;border-style: solid;border-width: 7px 7.5px 0 7.5px;border-color: #a6a6a6 transparent transparent transparent; position: absolute; right: -8px; bottom: 5px;}
+  &__col-price{padding-bottom: 25px;}
+  &__callback-wrap{    padding: 20px 45px 50px;}
+}
+.button_big span{    width: auto;  padding: 0 20px;}
+.btn_row-delete {position: absolute; border: 1px solid #333; border-radius: 50%; right: -5px; top: -15px; width: 16px; height: 16px; opacity: 0.3;}
+.btn_row-delete:hover { opacity: 1;}
+.btn_row-delete:before, .btn_row-delete:after { position: absolute; top: 50%;  left: 50%; margin-top: -5px; margin-left: -1px; content: ' '; height: 10px; width: 2px; background-color: #333; }
+.btn_row-delete:before { transform: rotate(45deg);}
+.btn_row-delete:after {transform: rotate(-45deg);}
+.basket__tabs_item_3 .btable__row{margin: 40px 60px 0;  padding-bottom: 35px;}
+.banner{
+  &__inner{ position: relative;}
+  &__subtitle{    font-size: 17px;  margin-top: 28px;}
+  &__title{    font-size: 61px; font-weight: 900;  margin-top: 8px;}
+  &__inner-text{position: absolute; font-family: "Raleway";  top: 26%; left: 18%;}
+  &__text{    font-size: 27px; font-weight: bold; text-transform: uppercase}
+}

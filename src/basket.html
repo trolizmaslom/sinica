@@ -1,0 +1,262 @@
+//= partials/head.html
+
+<div class="global-wrapper">
+    //= partials/header.html
+    <div class="main">
+    	<div class="mbox">
+    		<div class="wrap-basket-steps basket">	
+	    		<div class="wrap-tabs flex-row">
+	    			<a href="#1_container" class="btn-tabs js-tab ">
+	    				крок <span class="tabs-circle">I</span>
+	    			</a>
+	    			<a href="#2_container" class="btn-tabs js-tab">
+	    				крок</span> <span class="tabs-circle">II</span>
+	    			</a>
+	    			<a href="#3_container" class="btn-tabs js-tab">
+	    				крок <span class="tabs-circle">III</span>
+	    			</a>
+	    		</div>
+	    		<div class="basket__container">	
+	    			<div id="1_container" class="basket__tabs_item ">
+							<div class="basket__title">	Кошик </div>
+							<div class="basket__tabs_body flex_row flex-center">
+								<div class="basket__table btable">	
+									<div class="btable__row">	
+											<div class="btable__col btable__col_1">
+												<div class="btable__numb">1.</div>
+												<div class="btable__img">
+													<img src="../images/basket-img.png" alt="img">
+												</div>
+												<div class="btable__info">
+													<div class="btable__name">Віші дезодорант / 50г</div>
+													<div class="btable__select">
+														<select class="jq-selectbox">
+															<option>вул. Зарічанська, 3/1</option>
+															<option>вул 3/1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">Ціна	</div>
+												<div class="btable__col-inner btable__col-price">	250 грн</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Кількість </div>
+												<div class="btable__count">
+													<div class=" btable__input--center js-input-number">
+	                          <input class="btable__input" type="text" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
+	                          <div class="js-number-plus btable__count-plus"></div>
+	                          <div class="js-number-minus btable__count-minus"></div>
+	                        </div>
+												</div>
+												<div class="btable__col-inner"> макс 4 од	</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Всього </div>
+												<div class="btable__col-inner btable__col-price"> 250 грн	</div>
+											</div>
+											<a href="#" class="btn_row-delete"></a>
+									</div>	
+									<div class="btable__row">	
+											<div class="btable__col btable__col_1">
+												<div class="btable__numb">1.</div>
+												<div class="btable__img">
+													<img src="../images/basket-img.png" alt="img">
+												</div>
+												<div class="btable__info">
+													<div class="btable__name">Віші дезодорант / 50г</div>
+													<div class="btable__select">
+														<select class="jq-selectbox">
+															<option>вул. Зарічанська, 3/1</option>
+															<option>вул 3/1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">Ціна	</div>
+												<div class="btable__col-inner btable__col-price">	250 грн</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Кількість </div>
+												<div class="btable__count"> 
+													<div class=" btable__input--center js-input-number">
+	                          <input class="btable__input" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
+	                          <div class="js-number-plus btable__count-plus"></div>
+	                          <div class="js-number-minus btable__count-minus"></div>
+	                        </div>
+												</div>
+												<div class="btable__col-inner"> макс 4 од	</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Всього </div>
+												<div class="btable__col-inner btable__col-price"> 250 грн	</div>
+											</div>
+											<a href="#" class="btn_row-delete"></a>
+									</div>
+								</div>
+							</div>
+							<div class="basket__tabs_footer">
+								<div class="basket__summary ">
+									<div class="basket__summary-title">Твоє замовлення</div>
+									<div class="basket__summary-inner">
+										<div class="basket__summary-col">	Кількість: <span>2 од</span></div>
+										<div class="basket__summary-col">Сума замовлення: <span> 500 грн</span></div>
+									</div>
+								</div>
+								<a href="#" class="button" tabindex="0"><span>Далі</span></a>
+							</div>
+						</div>
+						<div id="2_container" class="basket__tabs_item">
+							<div class="basket__title">	Оформити замовлення </div>
+							<div class="basket__tabs_body flex_row flex-center">
+								<div class="basket__box">
+									<div class="basket__box-left">
+										<div class="basket__box-title">	Постійний клієнт</div>
+										<form class="form__validate" id="formRegularCustomer" method="get" novalidate="novalidate">
+		                  <dl>
+		                    <dd>
+		                      <input class="basket__input recuired" type="email" size="30" arial-required="true" name="email" placeholder="E-mail">
+		                    </dd>
+		                    <dd>
+		                      <input class="basket__input recuired" name="pass"  type="password" size="60" arial-required="true" placeholder="Пароль">
+		                    </dd>
+		                  </dl>
+		                </form>
+									</div>
+									<div class="basket__box-right">
+										<div class="basket__box-title">Новий клієнт	</div>
+										<form class="form__validate" id="formNewCustomer" method="get" novalidate="novalidate">
+		                  <dl>
+		                    <dd>
+		                      <input class="basket__input recuired" type="text" size="30" arial-required="true" name="text" >
+		                      <div class="basket__inputs-text">Ваше имя <span>*</span></div>
+		                    </dd>
+		                    <dd>
+		                      <input class="basket__input recuired" name="text" type="text" size="60" arial-required="true" placeholder="Прізвище">
+		                    </dd>
+		                    <dd>
+		                      <input class="basket__input recuired val-phone"  type="text" size="60" arial-required="true" >
+		                      <div class="basket__inputs-text">Телефон <span>*</span></div>
+		                    </dd>
+		                  </dl>
+		                </form>
+									</div>
+								</div>
+							</div>
+							<div class="basket__tabs_footer">
+								<a href="#" class="button" tabindex="0"><span>Далі</span></a>
+							</div>
+						</div>
+						<div id="3_container" class="basket__tabs_item basket__tabs_item_3">
+							<div class="basket__tabs_body flex_row flex-center">
+								<div class="basket__table btable">	
+									<div class="btable__row btable__row_header">	
+										<div class="btable__col-left">
+												<div class="basket__person">Марія Невгамовна</div>
+												<div class="basket__number">+38 (096) 101 02 88</div>
+										</div>
+										<div class="btable__col-right">
+											<div class="basket__summary-col">	Кількість: <span>2 од</span></div>
+											<div class="basket__summary-col">Сума замовлення: <span> 500 грн</span>
+											</div>
+										</div>
+									</div>
+									<div class="btable__row">	
+											<div class="btable__col btable__col_1">
+												<div class="btable__numb">1.</div>
+												<div class="btable__img">
+													<img src="../images/basket-img.png" alt="img">
+												</div>
+												<div class="btable__info">
+													<div class="btable__name">Віші дезодорант / 50г</div>
+													<div class="btable__select">
+														<select class="jq-selectbox">
+															<option>вул. Зарічанська, 3/1</option>
+															<option>вул 3/1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">Ціна	</div>
+												<div class="btable__col-inner btable__col-price">	250 грн</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Кількість </div>
+												<div class="btable__count">
+													<div class=" btable__input--center js-input-number">
+	                          <input class="btable__input" type="text" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
+	                          <div class="js-number-plus btable__count-plus"></div>
+	                          <div class="js-number-minus btable__count-minus"></div>
+	                        </div>
+												</div>
+												<div class="btable__col-inner"> макс 4 од	</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Всього </div>
+												<div class="btable__col-inner btable__col-price"> 250 грн	</div>
+											</div>
+									</div>	
+									<div class="btable__row">	
+											<div class="btable__col btable__col_1">
+												<div class="btable__numb">1.</div>
+												<div class="btable__img">
+													<img src="../images/basket-img.png" alt="img">
+												</div>
+												<div class="btable__info">
+													<div class="btable__name">Віші дезодорант / 50г</div>
+													<div class="btable__select">
+														<select class="jq-selectbox">
+															<option>вул. Зарічанська, 3/1</option>
+															<option>вул 3/1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">Ціна	</div>
+												<div class="btable__col-inner btable__col-price">	250 грн</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Кількість </div>
+												<div class="btable__count"> 
+													<div class=" btable__input--center js-input-number">
+	                          <input class="btable__input" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
+	                          <div class="js-number-plus btable__count-plus"></div>
+	                          <div class="js-number-minus btable__count-minus"></div>
+	                        </div>
+												</div>
+												<div class="btable__col-inner"> макс 4 од	</div>
+											</div>
+											<div class="btable__col">
+												<div class="btable__col-title">	Всього </div>
+												<div class="btable__col-inner btable__col-price"> 250 грн	</div>
+											</div>
+									</div>
+									<div class="btable__callback-wrap">
+										<textarea class="btable__callback" placeholder="Коментарі"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="basket__tabs_footer">
+								<a href="#" class="button button_big" tabindex="0"><span>Підтвердити резерв</span></a>
+							</div>
+						</div>
+						<div class="basket__empty hidden">
+							<!-- схований блок. показувати, коли немає в корзині товарів -->
+							<div class="basket__empty-content">
+								<img src="../images/icon-basket_big.png" alt="img">
+								<p class="basket__empty-note">У Вашій корзині немає товарів</p>
+							</div>
+						</div>
+					</div>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    //= partials/footer.html
+</div>
+</body>
+</html>

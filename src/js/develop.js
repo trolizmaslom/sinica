@@ -241,6 +241,86 @@ function placeholder(){
         });
     }
 }
+function stylerForm(){
+    $('.jq-selectbox').styler();
+}
+function inputNumber() {
+    $(document).on('click', '.js-number-minus', function () {
+        var val = getVal($(this));
+        val--;
+        val = val < 1 ? 1 : val;
+        $(this).closest('.js-input-number').find('input').val(val);
+    });
+    $(document).on('click', '.js-number-plus', function () {
+        var val = getVal($(this));
+        val++;
+        $(this).closest('.js-input-number').find('input').val(val);
+    });
+    function getVal(butt) {
+        var val =  parseInt(butt.closest('.js-input-number').find('input').val());
+        val = (typeof val == "number" && !isNaN(val)) ? val : 0;
+        return val;
+    }
+    $(document).on('keypress', '.js-input-number', function (evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        return true;
+    })
+    $(document).on('keypress', 'input[name$="[price]"]', function (evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+        return true;
+    });
+}
+$('input.recuired').on('focus', function(){
+    $(this).closest('dd').find('.basket__inputs-text').css('display', 'none');
+    $("input.val-phone").mask("+9 (99) 99-99-999");
+  });
+$('input.recuired').on('focusout', function(){
+    var content = $(this).val();
+    if(content.length == 0){
+        $(this).closest('dd').find('.basket__inputs-text').css('display', 'block');
+    }
+})
+$('input.val-phone').on('keyup keypress', function(e) {
+    if (e.keyCode == 8 || e.keyCode == 46) {}
+    else
+    {
+        var letters='1234567890';
+        return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+    }
+});
+var tabsCange = (function (){
+    var $btn = $('.js-tab');
+    var $tabBody = $(".basket__container");
+    var $tabItem = $(".basket__tabs_item");
+
+    $tabItem.eq(0).addClass('active');
+    $btn.eq(0).addClass('active');
+
+
+    $btn.on("click", function(e){
+
+        e.preventDefault();
+        $tabItem.removeClass("active");
+
+        var $this = $(this);
+        var $target = $this.attr("href");
+
+        if( $this.hasClass('active')){
+            $this.toggleClass("active");
+        }else{
+            $btn.removeClass('active');
+            $this.addClass('active');
+        }
+
+        if($btn.hasClass('active')){
+            $tabBody.find($target).addClass("active");
+        }
+
+    });
+
+})();
 $(document).ready(function(){
     autocompleteInit();
     loginClick();
@@ -251,4 +331,6 @@ $(document).ready(function(){
     slideActualInit();
     placeholder();
     slideRecomendlInit();
+    stylerForm();
+    inputNumber();
 });

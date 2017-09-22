@@ -466,7 +466,7 @@ input, textarea{
     }
     li:last-child{
       a{
-        font-family: 'Raleway-Bold';
+        // font-family: 'Raleway-Bold';
         font-weight: bold;
       }
       &:after{
@@ -977,3 +977,11 @@ input[type="checkbox"]:checked+label:before {
     .button{    margin-left: 45px;}
   }
 }
+.popup-gratitude{width: 100%; max-width: 370px;     border-radius: 2px; background: #fff;
+  &__img{margin-bottom: 31px;}
+  .call-subtitle{    font-size: 11px;}
+  .call-title{    font-size: 16px;    font-weight: bold;    margin-bottom: 15px;}
+  .call_success{display: flex; align-items: center; flex-direction: column; padding: 45px 0 57px;}
+}
+.test-popup{ display: block;
+ a{ font-size: 25px;     display: inline-block; color: #333; text-decoration: none; border: 1px solid #333; padding: 15px; margin-bottom: 15px;}}

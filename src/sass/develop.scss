@@ -933,7 +933,7 @@ input[type="checkbox"]:checked+label:before {
     span{width: 180px;}
   }
 }
-.booking-table{border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
+.booking-table{    margin-bottom: 60px; border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
   &__row{font-family: Arial; cursor:pointer; display: flex;    flex-direction: row;    align-items: center;}
   &__row.active{ 
     .booking-table__col{height: 60px}
@@ -969,6 +969,11 @@ input[type="checkbox"]:checked+label:before {
 }
 .booking-table .mCSB_scrollTools .mCSB_draggerContainer{ background: #fff;  position: absolute;  top: 10px;   left: -6px;  width: 16px;  bottom: 4px;     border-radius: 2px;}
 .booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.booking-table .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
-// .booking-table .mCSB_scrollTools .mCSB_dragger{overflow: hidden;}
 .booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
 .booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{background-color: #fff;}
+.booking{    margin-bottom: 115px;
+  &__btns{    margin-bottom: 30px; display: flex;   flex-direction: row;  justify-content: flex-end;
+    span{    width: 250px;     letter-spacing: -0.5px;}
+    .button{    margin-left: 45px;}
+  }
+}

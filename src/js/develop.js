@@ -330,6 +330,7 @@ $(window).on("load",function(){
     });
 });
 $(document).ready(function(){
+    slideRecomendlInit()
     autocompleteInit();
     loginClick();
     logRegClick();
@@ -338,7 +339,6 @@ $(document).ready(function(){
     paginator();
     slideActualInit();
     placeholder();
-    slideRecomendlInit();
     stylerForm();
     inputNumber();
 });

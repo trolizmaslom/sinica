@@ -458,9 +458,11 @@ input, textarea{
     a{
       text-decoration: none;
       color: #575757;
-      font-size: 14px;
-      letter-spacing: 0.2px;
-      font-family: 'Raleway-ExtraLight';
+      font-size: 12px;
+      letter-spacing: 0.7px;
+      font-family: 'Raleway';
+      font-weight: 200;
+      // font-family: 'Raleway-ExtraLight';
     }
     li:last-child{
       a{
@@ -912,3 +914,61 @@ input[type="checkbox"]:checked+label:before {
 .filter .mCustomScrollBox {
     height: 198px;
 }
+.product-cart{    margin-bottom: 100px; display: flex; flex-direction: row;     margin-top: 105px;
+  &__col{width: 50%;}
+  &__col-left{max-width: 555px;}
+  &__footer{    display: flex;  flex-direction: row;  justify-content: space-between;}
+  &__col-right{    display: flex; justify-content: space-between;  flex-direction: column;}
+  &__title{       margin-bottom: 27px; font-weight: 900; font-size: 41px; letter-spacing: 0.5px; text-transform: uppercase; font-family: Arial; line-height: 31px;
+    span{text-transform: none;}
+  }
+  &__description{color: #808080;     margin-bottom: 30px;}
+  &__description-text{     line-height: 18px;   font-size: 12px; max-width: 535px;}
+  &__description-title{font-size: 14px;    font-weight: bold;    margin-bottom: 10px;}
+  &__subtitle{font-weight: bold; font-size: 16px;  margin-bottom: 47px;}
+  &__price{       padding-top: 8px; font-size: 24px;    color: #191919;    font-family: Arial;
+    span{    font-weight: 900;    font-size: 36px;    padding-left: 3px;}
+  }
+  &__instruction{ margin-right: -15px;
+    span{width: 180px;}
+  }
+}
+.booking-table{border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
+  &__row{font-family: Arial; cursor:pointer; display: flex;    flex-direction: row;    align-items: center;}
+  &__row.active{ 
+    .booking-table__col{height: 60px}
+    .booking-table__col:nth-child(odd){background-color: #dddddd}
+    .booking-table__col:nth-child(even){background-color: #c0c0c0}
+    .booking-table__btn-xs{
+      span{background: #ffffff;     color: #333; box-shadow: none;
+        &:before{ content: "у кошику";}
+      }
+    }
+  }
+  &__col:nth-child(even){background-color: #e6e6e6; border-bottom: 1px solid #c0c0c0}
+  &__col:nth-child(odd){background-color: #f2f2f2; border-bottom: 1px solid #d9d9d9;}
+  &__row:last-child{.booking-table__col:last-child{border-bottom: none;}}
+  &__col{height: 50px; display: flex;   align-items: center;    justify-content: center;}
+  &__col_1{    width: 57%; justify-content: flex-start}
+  &__col_2{    width: 8%;}
+  &__col_3{    width: 14%;}
+  &__col_4{    width: 22%;}
+  &__count, &__price{font-size: 16px;}
+  &__place{font-size: 16px;   font-weight: bold;    padding-left: 22px;    font-family: Arial;}
+  &__btn-xs{
+    span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; background: #f2f2f2;
+        &:before{content: "у кошик"; position: absolute;}
+        }
+    }
+}
+.booking-table .mCustomScrollBox {
+    height: 310px;
+}
+.booking-table .mCSB_inside > .mCSB_container{
+  margin-right: 0;
+}
+.booking-table .mCSB_scrollTools .mCSB_draggerContainer{ background: #fff;  position: absolute;  top: 10px;   left: -6px;  width: 16px;  bottom: 4px;     border-radius: 2px;}
+.booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.booking-table .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
+// .booking-table .mCSB_scrollTools .mCSB_dragger{overflow: hidden;}
+.booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
+.booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{background-color: #fff;}

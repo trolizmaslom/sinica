@@ -325,6 +325,9 @@ $(window).on("load",function(){
   $(".js-custom-scroll").mCustomScrollbar({
     "theme" : "dark-2"
     });
+  $(".js-booking-scroll").mCustomScrollbar({
+    "theme" : "dark-2"
+    });
 });
 $(document).ready(function(){
     autocompleteInit();

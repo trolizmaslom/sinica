@@ -1,0 +1,11 @@
+http://front.showmemysite.ru/synycia/
+http://front.showmemysite.ru/synycia/basket.html
+http://front.showmemysite.ru/synycia/catalog.html
+http://front.showmemysite.ru/synycia/category.html
+http://front.showmemysite.ru/synycia/category-main.html
+http://front.showmemysite.ru/synycia/article.html
+http://front.showmemysite.ru/synycia/newPage.html
+http://front.showmemysite.ru/synycia/news.html
+http://front.showmemysite.ru/synycia/product.html
+http://front.showmemysite.ru/synycia/product-card.html
+http://front.showmemysite.ru/synycia/suggestions.html

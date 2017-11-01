@@ -148,6 +148,10 @@ function popNext(popupId){
 function Maskedinput(){
     if($('.tel-mask')){
         $('.tel-mask').mask('+9 (999) 999-99-99 ');
+    }if($('.accept-mask')){
+        $('.accept-mask').mask('99-99-99');
+    }if($('.card-mask')){
+        $('.card-mask').mask('99-99-9');
     }
 }
 $(document).ready(function(){

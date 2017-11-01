@@ -87,5 +87,98 @@
             <a href="#" class="icon icon--white icon--bh"><span><img src="images/ic8-w.png" alt=""></span></a>
         </div>
     </div>
-
+    <div class="popup popup--accept" id="popup-accept">
+        <div class="popup__title"><span>Підтвердження</span></div>
+        <div class="popup__content popup__content--accept">
+            <div class="popup__text--accept">
+                На Ваш e-mail / телефон надіслано код підтвердження. Введіть код.
+                    Якщо Ви не отримали підтвердження зверніться у аптеку <br>
+                    для корегування даних картки.
+                </div>
+                <div class="popup__form">
+          <form action="ajax.php">
+            <div class="form_row form_row--center">
+                <div class="form_input form_input--sm ">
+                <input type="text"  class="accept-mask recuired" required="required" placeholder="xx xx xx" >
+              </div>
+            </div>
+          </form>
+           <div class="form_input popup--accept__button">
+            <a href="#" class="button button--lCabinet">
+                <span>Підтвердити</span>
+            </a>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="popup popup--number" id="popup-numberCard">
+        <div class="popup__title"><span>Номер картки</span></div>
+        <div class="popup__content popup__content--number">
+          <form action="ajax.php">
+            <div class="form_row form_row--center">
+                <div class="form_input form_input--xs ">
+                <input type="text"  class="card-mask recuired" required="required" placeholder="xx xx x" >
+              </div>
+            </div>
+          </form>
+           <div class="form_input popup--number__button">
+            <a href="#" class="button button--lCabinet">
+                <span>Далі</span>
+            </a>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="popup popup--anketa" id="popup-anketa">
+        <div class="popup__title"><span>Анкета картки</span></div>
+        <div class="popup__text">Підтвердіть будь ласка Ваші дані та відкорегуйте якщо є невідповідність.</div>
+        <div class="popup__content popup__content--anketa">
+          <form action="ajax.php">
+            <div class="form_rows--anketa">
+                <div class=" form_row--anketa">
+                  <div class="form_input--anketa form_input--anketa-lastName">
+                    <span>Прізвище: </span>
+                    <input type="text" required="required" value="Хмиз">
+                  </div>
+                </div>
+                <div class="form_row--anketa">
+                  <div class="form_input--anketa ">
+                    <span>Ім'я: </span>
+                    <input type="text" required="required" value="Олександр">
+                  </div>
+                </div>
+                <div class=" form_row--anketa">
+                  <div class="form_input--anketa">
+                    <span>Адреса: </span>
+                    <input type="text" required="required" value="вул. Проскурівська 40/1">
+                  </div>
+                </div>
+                <div class=" form_row--anketa">
+                  <div class="form_input--anketa form_input--anketa-bDay">
+                    <span>Дата народження: </span>
+                    <input type="text" required="required" value="10.03.1996">
+                  </div>
+                </div>
+                <div class=" form_row--anketa">
+                  <div class="form_input--anketa">
+                    <span>E-mail: </span>
+                    <input type="text" required="required" value="korystuvach@gmail.com">
+                  </div>
+                </div>
+                <div class=" form_row--anketa">
+                  <div class="form_input--anketa">
+                    <span>Телефон: </span>
+                    <input type="text" required="required" value="+38 (098) 202 34 39">
+                  </div>
+                </div>
+              </div>
+          </form>
+           <div class="form_input popup--anketa__button">
+            <a href="#" class="button button--lCabinet">
+                <span>Підтвердити</span>
+            </a>
+          </div>
+        </div>
+        </div>
+    </div>
 </div>

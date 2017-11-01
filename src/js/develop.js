@@ -292,8 +292,8 @@ $('input.val-phone').on('keyup keypress', function(e) {
 });
 var tabsCange = (function (){
     var $btn = $('.js-tab');
-    var $tabBody = $(".basket__container");
-    var $tabItem = $(".basket__tabs_item");
+    var $tabBody = $(".js-tab-container");
+    var $tabItem = $(".js-tab-item");
 
     $tabItem.eq(0).addClass('active');
     $btn.eq(0).addClass('active');
@@ -321,9 +321,43 @@ var tabsCange = (function (){
     });
 
 })();
+function cutText(){
+    var lenDescr = 82;
+    var descr = $('.news__item__text');
+    var lenDescrMain = 190;
+    var descrMain = $('.news__banner__text');
+    if(descr){
+        descr.each(function(){
+            var descrText = $(this).text();
+            var descrTextLenght = descrText.length;
+            if(descrTextLenght > lenDescr ){
+                descrText = descrText.substr(0, lenDescr);
+                descrText = descrText.replace(/\w+$/, '');
+                descrText += '...';
+                $(this).html(descrText);
+            }
+        })
+    }
+    if(descrMain){
+        descrMain.each(function(){
+            var descrText = $(this).text();
+            var descrTextLenght = descrText.length;
+            if(descrTextLenght > lenDescrMain ){
+                descrText = descrText.substr(0, lenDescrMain);
+                descrText = descrText.replace(/\w+$/, '');
+                descrText += '...';
+                $(this).html(descrText);
+            }
+        })
+    }
+}
 $(window).on("load",function(){
+    cutText();
   $(".js-custom-scroll").mCustomScrollbar({
     "theme" : "dark-2"
+    });
+  $(".js-chat-scroll").mCustomScrollbar({
+    "theme" : "dark-3"
     });
   $(".js-booking-scroll").mCustomScrollbar({
     "theme" : "dark-2"

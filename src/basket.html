@@ -115,33 +115,36 @@
 									<div class="basket__box-left">
 										<div class="basket__box-title">	Постійний клієнт</div>
 										<form class="form__validate" id="formRegularCustomer" method="get" novalidate="novalidate">
-		                  <dl>
-		                    <dd>
-		                      <input class="basket__input recuired" type="email" size="30" arial-required="true" name="email" placeholder="E-mail">
-		                    </dd>
-		                    <dd>
-		                      <input class="basket__input recuired" name="pass"  type="password" size="60" arial-required="true" placeholder="Пароль">
-		                    </dd>
-		                  </dl>
-		                </form>
-									</div>
-									<div class="basket__box-right">
-										<div class="basket__box-title">Новий клієнт	</div>
-										<form class="form__validate" id="formNewCustomer" method="get" novalidate="novalidate">
-		                  <dl>
-		                    <dd>
-		                      <input class="basket__input recuired" type="text" size="30" arial-required="true" name="text" >
-		                      <div class="basket__inputs-text">Ваше ім'я <span>*</span></div>
-		                    </dd>
-		                    <dd>
-		                      <input class="basket__input recuired" name="text" type="text" size="60" arial-required="true" placeholder="Прізвище">
-		                    </dd>
-		                    <dd>
-		                      <input class="basket__input recuired val-phone"  type="text" size="60" arial-required="true" >
-		                      <div class="basket__inputs-text">Телефон <span>*</span></div>
-		                    </dd>
-		                  </dl>
-		                </form>
+						                  <dl>
+						                    <dd class="form-row">
+						                      <input class="basket__input recuired" type="email" size="30" arial-required="true" name="email">
+						                      <div class="basket__inputs-text placeholder">E-mail</div>
+						                    </dd>
+						                    <dd class="form-row">
+						                      <input class="basket__input recuired" name="pass"  type="password" size="60" arial-required="true">
+						                       <div class="basket__inputs-text placeholder">Пароль</div>
+						                    </dd>
+						                  </dl>
+						                </form>
+													</div>
+													<div class="basket__box-right">
+														<div class="basket__box-title">Новий клієнт	</div>
+														<form class="form__validate" id="formNewCustomer" method="get" novalidate="novalidate">
+						                  <dl>
+						                    <dd class="form-row">
+						                      <input class="basket__input recuired" type="text" size="30" arial-required="true" name="text" >
+						                      <div class="basket__inputs-text placeholder">Ваше ім'я <span>*</span></div>
+						                    </dd>
+						                    <dd class="form-row">
+						                      <input class="basket__input recuired" name="text" type="text" size="60" arial-required="true">
+						                      <div class="basket__inputs-text placeholder">Прізвище</div>
+						                    </dd>
+						                    <dd class="form-row">
+						                      <input class="basket__input recuired tel-mask"  type="text" size="60" arial-required="true" >
+						                      <div class="basket__inputs-text placeholder">Телефон <span>*</span></div>
+						                    </dd>
+						                  </dl>
+						                </form>
 									</div>
 								</div>
 							</div>
@@ -149,10 +152,11 @@
 								<a href="#" class="button" tabindex="0"><span>Далі</span></a>
 							</div>
 						</div>
-						<div id="3_container" class="basket__tabs_item js-tab-item basket__tabs_item_3">
+					<div id="3_container" class="basket__tabs_item js-tab-item basket__tabs_item_3">
 							<div class="basket__tabs_body flex_row flex-center">
 								<div class="basket__table btable">	
-									<div class="btable__row btable__row_header">	
+									<div class="btable__row-wrap">
+										<div class="btable__row btable__row_header">	
 										<div class="btable__col-left">
 												<div class="basket__person">Марія Невгамовна</div>
 												<div class="basket__number">+38 (096) 101 02 88</div>
@@ -162,7 +166,7 @@
 											<div class="basket__summary-col">Сума замовлення: <span> 500 грн</span>
 											</div>
 										</div>
-									</div>
+										</div>
 									<div class="btable__row">	
 											<div class="btable__col btable__col_1">
 												<div class="btable__numb">1.</div>
@@ -187,10 +191,10 @@
 												<div class="btable__col-title">	Кількість </div>
 												<div class="btable__count">
 													<div class=" btable__input--center js-input-number">
-	                          <input class="btable__input" type="text" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
-	                          <div class="js-number-plus btable__count-plus"></div>
-	                          <div class="js-number-minus btable__count-minus"></div>
-	                        </div>
+			                          <input class="btable__input" type="text" placeholder="" name="order[0][count]" value="1" maxlength="2" required="required">
+			                          <div class="js-number-plus btable__count-plus"></div>
+			                          <div class="js-number-minus btable__count-minus"></div>
+			                        </div>
 												</div>
 												<div class="btable__col-inner"> макс 4 од	</div>
 											</div>
@@ -235,6 +239,7 @@
 												<div class="btable__col-inner btable__col-price"> 250 грн	</div>
 											</div>
 									</div>
+								</div>
 									<div class="btable__callback-wrap">
 										<textarea class="btable__callback" placeholder="Коментарі"></textarea>
 									</div>
@@ -256,6 +261,7 @@
 	    	</div>
     	</div>
     </div>
+    //= partials/hidden-block.html
     //= partials/footer.html
 </div>
 </body>

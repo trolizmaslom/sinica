@@ -34,17 +34,27 @@ function loginClick(){
 function logRegClick(){
     var butt = $('.login-pop>a');
     var menu = $('.login-pop__menu-wrap');
+    var layer = $('.js-login-pop-layer');
     if(butt.length > 0){
         butt.click(function (e) {
             e.preventDefault();
             butt.toggleClass('active');
+            layer.addClass('active');
             if(butt.hasClass('active')){
                 menu.stop().slideDown(100);
             }else{
                 menu.stop().slideUp(100);
             }
         });
-
+        layer.click(function(){
+            butt.toggleClass('active');
+            if(butt.hasClass('active')){
+                menu.stop().slideDown(100);
+            }else{
+                menu.stop().slideUp(100);
+            }
+            $(this).removeClass('active');
+        })
     }
 }
 //menuMob
@@ -231,6 +241,7 @@ function placeholder(){
         ph.each(function () {
             var input = $(this).prev('input');
             var that = $(this);
+            
             input.blur(function (){
                 if($(this).val().length > 0){
                     that.addClass('focus');
@@ -239,6 +250,21 @@ function placeholder(){
                 }
             });
         });
+    }
+}
+function placeholderHide(){
+    var search = $('.header__search input');
+    if(search.length > 0){
+        search.each(function () {
+             var input = $(this);
+            input.focus(function(){
+                $(this).data('placeholder', $(this).attr('placeholder'));
+                $(this).attr('placeholder','');
+            });
+            input.blur(function(){
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            })
+         })
     }
 }
 function stylerForm(){
@@ -273,7 +299,7 @@ function inputNumber() {
     });
 }
 $('input.recuired').on('focus', function(){
-    $(this).closest('dd').find('.basket__inputs-text').css('display', 'none');
+    // $(this).closest('dd').find('.basket__inputs-text').css('display', 'none');
     $("input.val-phone").mask("+9 (99) 99-99-999");
   });
 $('input.recuired').on('focusout', function(){
@@ -375,4 +401,5 @@ $(document).ready(function(){
     placeholder();
     stylerForm();
     inputNumber();
+    placeholderHide();
 });

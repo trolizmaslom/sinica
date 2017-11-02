@@ -377,12 +377,22 @@ function cutText(){
         })
     }
 }
+function showDetailProdPopup(){
+    var detailProd = $('.js-showDetailProd');
+    detailProd.on('click', function(){
+        var $this = $(this);
+        var thisRow = $(this).parent('tr');
+         $(this).parent('tr').toggleClass('active');
+        $this.toggleClass('active');
+        thisRow.find('.popup--history__detailProd').toggleClass('hidden');
+    })
+}
 $(window).on("load",function(){
     cutText();
   $(".js-custom-scroll").mCustomScrollbar({
     "theme" : "dark-2"
     });
-  $(".js-chat-scroll").mCustomScrollbar({
+  $(".js-chat-scroll, .js-scroll-bold").mCustomScrollbar({
     "theme" : "dark-3"
     });
   $(".js-booking-scroll").mCustomScrollbar({
@@ -390,7 +400,8 @@ $(window).on("load",function(){
     });
 });
 $(document).ready(function(){
-    slideRecomendlInit()
+    slideRecomendlInit();
+    showDetailProdPopup();
     autocompleteInit();
     loginClick();
     logRegClick();

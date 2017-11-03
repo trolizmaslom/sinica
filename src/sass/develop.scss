@@ -1796,6 +1796,7 @@ input[type="checkbox"]:checked+label:before {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
         max-width: 245px;
         padding: 0 5px 5px;
         margin: 0 auto;
@@ -1805,16 +1806,7 @@ input[type="checkbox"]:checked+label:before {
         text-align: center;
       }
       &__title{
-        flex: 1;
         text-align: left;
-        position: relative;
-        &:after{
-          content: '';
-          display: block;
-          height: 1px;
-          background: url(../images/dot.png) repeat-x;
-          width: 100%;
-        }
       }
     }
     &__table{
@@ -1956,4 +1948,16 @@ input[type="checkbox"]:checked+label:before {
 }
 .button--lCabinet span{
   width: 250px;
+}
+.dots{
+  position: relative;
+  flex-grow: 1;
+  display: block;
+  &:after{
+    content: '';
+    display: block;
+    height: 1px;
+    background: url(../images/dot.png) repeat-x;
+    width: 100%;
+  }
 }

@@ -190,8 +190,7 @@ input, textarea{
     input[type="checkbox"] + i{ width: 17px; height: 17px; display: inline-block;border:1px solid rgb(198, 198, 198); position: relative; margin-right: 14px;
       &:before{content:''; display: block; position: absolute; background-image: url(../images/checked.png); width: 10px; height: 7px; opacity:0; top: 4px; left: 3px;}
     }
-    .placeholder.focus,
-    input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
+   
     &--between{ display: flex; justify-content: space-between; align-items: flex-start; padding: 14px 10px 30px;
       a{ text-decoration: underline; color: #000; font-weight: 400; font-size: 12px;
         &:hover{ text-decoration: none;}
@@ -205,6 +204,8 @@ input, textarea{
   }
   .placeholder{pointer-events: none; position: absolute; top: 12px;  left: 25px; transition:all 200ms; }
 .tel-mask{font-family: Arial, sans-serif}
+ .placeholder.focus,
+    input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
 /*END forms*/
 /*popups*/
   .popup{ padding: 0; max-width: 794px; width: 100%;
@@ -843,7 +844,7 @@ input, textarea{
   &__box-left, &__box-right{ width: 50%;}
   &__box-right{ border-left: 1px dashed #c6c6c6}
   &__box-title{font-size: 20px;    font-weight: 600;}
-  &__inputs-text{ pointer-events:none;  position: absolute; color: #333; z-index: 2; top: 17px; left: 17px;
+  &__inputs-text{ font-family:Arial, sans-serif; pointer-events:none;  position: absolute; color: #333; z-index: 2; top: 17px; left: 17px;
     span{    color: #f64f5f;}
   }
   &__empty.hidden{display: none;}
@@ -982,7 +983,7 @@ input[type="checkbox"]:checked+label:before {
 .filter .mCustomScrollBox {
     height: 198px;
 }
-.product-cart{    margin-bottom: 100px; display: flex; flex-direction: row;     margin-top: 105px;
+.product-cart{    margin-bottom: 80px; display: flex; flex-direction: row;     margin-top: 105px;
   &__col{width: 50%;}
   &__col-left{max-width: 555px;}
   &__footer{    display: flex;  flex-direction: row;  justify-content: space-between;}
@@ -990,15 +991,58 @@ input[type="checkbox"]:checked+label:before {
   &__title{       margin-bottom: 27px; font-weight: 900; font-size: 41px; letter-spacing: 0.5px; text-transform: uppercase; font-family: Arial; line-height: 31px;
     span{text-transform: none;}
   }
-  &__description{color: #808080;     margin-bottom: 30px;}
+  &__description{color: #666666;     margin-bottom: 30px;}
   &__description-text{     line-height: 18px;   font-size: 12px; max-width: 535px;}
   &__description-title{font-size: 14px;    font-weight: bold;    margin-bottom: 10px;}
   &__subtitle{font-weight: bold; font-size: 16px;  margin-bottom: 47px;}
-  &__price{       padding-top: 8px; font-size: 24px;    color: #191919;    font-family: Arial;
-    span{    font-weight: 900;    font-size: 36px;    padding-left: 3px;}
+  &__price{       padding-top: 10px; font-size: 24px;    color: #191919;    font-family: Arial;
+    span{    font-weight: bold;    font-size: 36px;    padding-left: 3px;}
   }
   &__instruction{ margin-right: -15px;
     span{width: 180px;}
+  }
+}
+.saleBlock{
+  margin-bottom: 120px;
+  &__wrap{
+    border: 1px solid #e6e6e6;
+    padding: 32px 20px 32px 110px;
+  }
+  &__title{
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px 0;
+  }
+  &__subtitle{
+    font-weight: 500;
+    color: #1a1a1a;
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  &__text{
+    color: #666666;
+    line-height: 24px;
+    padding: 2px 0 10px;
+    span{
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: -0.4px;
+    }
+  }
+}
+.icon-attention{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 40px;
+    left: -72px;
+    width: 40px;
+    top: 7px;
+    background-image: url(../images/icon-attention.png);
   }
 }
 .booking-table{    margin-bottom: 60px; border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
@@ -1024,7 +1068,7 @@ input[type="checkbox"]:checked+label:before {
   &__count, &__price{font-size: 16px;}
   &__place{font-size: 16px;   font-weight: bold;    padding-left: 22px;    font-family: Arial;}
   &__btn-xs{
-    span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; background: #f2f2f2;
+    span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; background: #fff;
         &:before{content: "у кошик"; position: absolute;}
         }
     }

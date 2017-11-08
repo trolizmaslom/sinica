@@ -236,9 +236,12 @@ function slideRecomendlInit() {
     }
 }
 function placeholder(){
-    var ph = $('input + .placeholder');
-    if(ph.length > 0){
-        ph.each(function () {
+    placeholderFocus ($('input + .placeholder'));
+    placeholderFocus ($('input + .plaseholder--help'));
+}
+function placeholderFocus (element){
+    if(element> 0){
+        element.each(function () {
             var input = $(this).prev('input');
             var that = $(this);
             

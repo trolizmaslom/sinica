@@ -116,25 +116,13 @@ input, textarea{
     &:active{ outline: none;}
     span{ display: flex; justify-content: center; align-items: center; font-weight: 600; font-size: 18px; width: 196px; height: 55px; box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.24); background-color: #fff; border-radius: 28px; color: #000; }
     &:hover{ text-decoration: none;
-      span{background-color: rgb(255, 234, 0); color: #fff;}
+      span{background-color: rgb(255, 234, 0); color: #fff; box-shadow: none}
     }
     &--reverse{
       span{ width: 250px;}
     }
-    &--grey{
-      &:hover{
-        span{box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.24);}
-      }
-    }
-    &--grey-white{
-      span{ color: #fff; background: #bababa; border: 2px solid #fff;   box-shadow: none;  }
-    }
-    &--white-yellow{
-      span{  box-shadow: none; }
-      &:hover{ 
-        span{border: 2px solid #fff; background-color: #ffea00; color: #fff}
-      }
-    }
+    
+    
    
 
   }
@@ -167,7 +155,7 @@ input, textarea{
       width: 100%;
       max-width: 280px;
       padding: 10px 15px;
-      border: 1px solid #333;
+      border: 1px solid #c6c6c6;
       border-radius: 40px; 
       margin-bottom: 27px;
 
@@ -202,7 +190,15 @@ input, textarea{
     }
     &--center{ text-align: center;}
   }
-  .placeholder{pointer-events: none; position: absolute; top: 12px;  left: 25px; transition:all 200ms; }
+  .placeholder{pointer-events: none; position: absolute; top: 12px;  left: 25px; transition:all 200ms; 
+  }
+  .placeholder--help{
+        opacity: 0; font-family: Arial, sans-serif; pointer-events: none; position: absolute;    left: 25px; transition:all 200ms;
+   }
+  .placeholder--help.focus, input:focus ~ .placeholder--help{
+    top: 41px;
+    opacity: 1;
+  }
 .tel-mask{font-family: Arial, sans-serif}
  .placeholder.focus,
     input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
@@ -284,7 +280,7 @@ input, textarea{
         }
         &__search{border:1px solid rgb(198, 198, 198); width: 283px;  height: 40px; border-radius: 20px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 41px;  padding-right: 8px; z-index: 50;
             &:before{content: ''; position: absolute; background-image: url(../images/search.png); width: 16px; height: 16px; left: 11px; top: 11px;}
-            input{border:none; width: 100%; font-weight: 100; color: #000; background-color: transparent;}
+            input{border:none; width: 100%; font-weight: 400; color: #000; background-color: transparent;}
             // &:hover,
             &.focus{ box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12);}
           &.focus{ border-color: #fff;}
@@ -424,7 +420,7 @@ input, textarea{
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start;}
     &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 auto;  background-color: #fff;
       &:hover{text-decoration: none;
-        .actual__txt span{color: #000;}
+        // .actual__txt span{color: #000;}
         .actual__img:before{background-color: rgba(0,0,0,0.85)}
       }
       img{ position: relative; z-index: 5; margin: 0 auto; object-fit: cover; height: 100%; width: 100%;}
@@ -436,9 +432,9 @@ input, textarea{
       &:before{ content: ''; background-color: rgba(0,0,0,0.7); position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; z-index: 10;}
     }
     &__texter{ color: #fff; position: absolute; bottom: 0; left: 0; z-index: 20; padding:27px;}
-    &__txt{display: flex; justify-content: flex-end;
+    &__txt{position: absolute; bottom: 10px; right: 27px; color: #fff; z-index: 20;
       span:first-child{ color: #aaa; font-weight: 300; font-family:Arial, sans-serif; }
-      span:last-child{ color: #777; letter-spacing: 2px;
+      span:last-child{ color: #fff; letter-spacing: 2px;
         &:hover{ text-decoration: underline;}
         }
     }
@@ -468,7 +464,7 @@ input, textarea{
   .footer{ background-color: #000; color: #fff;
     &__wrap{ display: flex; justify-content: space-between; align-items: flex-end; padding: 30px 0 40px;}
     &__nav{ width: 566px; display: flex; justify-content: flex-start;
-      a{ width:100%; color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 300; font-size: 12px; margin-top: 38px; display: inline-block; position: relative;
+      a{ color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 300; font-size: 12px; margin-top: 38px; display: inline-block; position: relative;
         &:before{ content: ''; position: absolute; left:calc(50% - 4px); bottom: 5px; width: 6px; height: 6px; border-radius:50%; background-color: #fff; opacity: 0; transition: all 100ms;}
         &:hover:before{ opacity: 1; bottom: -12px;}
       }
@@ -797,25 +793,35 @@ input, textarea{
 .recomend .slick-dots li.slick-active button {
     background-color: #000;
 }
-.btn-tabs{ letter-spacing: 1px; position: relative; display: block; color: #a6a6a6; text-decoration: none; text-transform: uppercase; border: 1px solid #a6a6a6; text-align: center; font-weight: bold; font-size: 18px; padding: 15px; width: 33.33%}
-.btn-tabs:not(:first-child){ border-left: none}
+.btn-tabs{ letter-spacing: 1px; position: relative; display: block; color: #a6a6a6; text-decoration: none; text-transform: uppercase; border-left: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; border-top: 1px solid #a6a6a6; text-align: center; font-weight: bold; font-size: 18px; padding: 15px; width: 33.33%}
+.btn-tabs:last-child{border-right: 1px solid #a6a6a6;}
+.btn-tabs.active + .btn-tabs{border-left:none;}
 .btn-tabs--center.active:before, .btn-tabs--last.active:before{
   content:''; display: block; position: absolute; left: -1px; top:-1px; width: 0; height: 0; border-style: solid; border-width: 25px 0 25px 10px; border-color: transparent transparent transparent #fff;
 }
-
 .flex-row{display: flex; flex-direction: row; align-items: center;}
 .btn-tabs.active{background: #ffea00; border-color: transparent; color: #fff;
 .tabs-circle{&:before{
   background: #fff;
 }}
 }
-.btn-tabs.active:after{content:''; display: block; position: absolute; right: -11px; top:-1px; width: 0; height: 0; border-style: solid; border-width: 25px 0 25px 10px; border-color: transparent transparent transparent #ffea00;}
+.btn-tabs.active:after{content:''; display: block; position: absolute; left:100%; top:-1px; width: 0; height: 0; border-style: solid; border-width: 25px 0 25px 10px; border-color: transparent transparent transparent #ffea00;}
 .btn-tabs--last.active:after{
   display: none;
   }
 .wrap-basket-steps{ padding: 69px 0px; }
 .tabs-circle{position: relative;  padding-left: 15px;
 &:before{content:''; background: #a6a6a6; border-radius: 50%; height: 5px; width: 5px;  position: absolute; left:0; top: 50%; transform: translateY(-50%);}
+}
+.icon-bird{
+  &:before{
+    background-image: url('../images/icon-bird.png');
+  }
+}
+.icon-egg{
+  &:before{
+    background-image: url('../images/icon-egg.png');
+  }
 }
 .basket{
   &__container{    text-align: center;    padding: 50px 0 0;  }
@@ -824,7 +830,7 @@ input, textarea{
   &__tabs_body{    border: 1px solid #c6c6c6;  }
   &__summary{width: 410px;     margin-top: 25px;}
   &__tabs_footer{display: flex; flex-direction: column; justify-content: end; align-items: flex-end; margin-top: 50px;}
-  &__title{font-size: 20px;font-weight: 600;    margin-bottom: 20px;}
+  &__title{font-size: 20px;font-weight: bold; line-height: 0.8;   margin-bottom: 20px;}
   &__summary{border: 1px solid #dadada;     margin-bottom: 35px;} 
   &__summary-inner{ padding: 30px 50px;  justify-content: space-between; background: #f2f2f2; border-top: 1px solid #dadada; display: flex; align-items: center; }
   &__summary-title{font-size: 18px;    padding: 20px 0;  letter-spacing: 1px;}
@@ -835,6 +841,17 @@ input, textarea{
   &__person:before{content: ''; position: absolute; left: 6px; bottom: 3px; width: 10px; height: 10px; border-radius: 50%; background-color: #ffea00; }
   &__number{font-family: Arial; padding-top: 13px; text-align: left; padding-left: 31px; color: #a6a6a6}
   &__box{ display: flex;  padding: 55px 0;  flex-direction: row;    justify-content: center;
+    &__icon{margin: 0 0 40px; min-height: 110px;   position: relative;
+      &:before{
+        position: absolute;
+        content: '';
+        display: table;
+        height: 108px;
+        width: 108px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
     dd{margin: 0 auto 25px; max-width: 370px; position: relative; display: block;
         &:last-child{ margin-bottom: 10px;}
         .placeholder.focus ,input:focus + .placeholder {opacity: 0;}
@@ -844,7 +861,7 @@ input, textarea{
   &__box-left, &__box-right{ width: 50%;}
   &__box-right{ border-left: 1px dashed #c6c6c6}
   &__box-title{font-size: 20px;    font-weight: 600;}
-  &__inputs-text{ font-family:Arial, sans-serif; pointer-events:none;  position: absolute; color: #333; z-index: 2; top: 17px; left: 17px;
+  &__inputs-text{ font-family:Arial, sans-serif; pointer-events:none;  position: absolute; color: #333; z-index: 2; top: 19px; left: 19px; font-size: 12px;
     span{    color: #f64f5f;}
   }
   &__empty.hidden{display: none;}
@@ -867,7 +884,7 @@ input, textarea{
     .jq-selectbox.focused .jq-selectbox__select{    border: 1px solid #a4a6a7;}
     .jq-selectbox__trigger-arrow{    top: 17px; right: 16px;}
   }
-  &__input{ max-width: 24px; height: 28px; width: 100%; border: 1px solid #c6c6c6; line-height: 28px;  font-size: 12px;  font-family: Arial;  padding: 0 7px;  font-weight: 300;  color: #40434e;}
+  &__input{ max-width: 40px; height: 28px; width: 100%; border: 1px solid #c6c6c6; line-height: 28px;  font-size: 12px;  font-family: Arial;  padding: 0 7px;  font-weight: 300;  color: #40434e;}
   &__numb{ font-family: Arial; color: #747474;}
   &__name, &__col-title{ color: #0d0d0d; font-family: Arial; font-size: 14px; font-weight: bold}
   &__img{ border: 1px solid #c6c6c6; margin: 0 35px 0px 25px;}
@@ -939,7 +956,7 @@ input[type=checkbox] {
     display: none;
 }
 .filter input[type=checkbox]+label {
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 42px;
 }
 input[type=checkbox]+label {
@@ -973,7 +990,7 @@ input[type="checkbox"]:checked+label:before {
 .filter{  padding-left: 15px;
   &__title{ letter-spacing: -0.7px; font-size: 20px;     margin: 14px 0 18px; font-weight: 600;}
   &__inputs{
-    p{     padding: 6px 0 25px; margin: 0; font-size: 12px;
+    p{     padding: 6px 0 23px; margin: 0; font-size: 12px;
       &:last-child{padding-bottom: 7px;}}
   }
 }
@@ -981,7 +998,7 @@ input[type="checkbox"]:checked+label:before {
     margin-bottom: 22px;
 }
 .filter .mCustomScrollBox {
-    height: 198px;
+    height: 200px;
 }
 .product-cart{    margin-bottom: 80px; display: flex; flex-direction: row;     margin-top: 105px;
   &__col{width: 50%;}
@@ -1003,7 +1020,7 @@ input[type="checkbox"]:checked+label:before {
   }
 }
 .saleBlock{
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   &__wrap{
     border: 1px solid #e6e6e6;
     padding: 32px 20px 32px 110px;
@@ -1048,12 +1065,12 @@ input[type="checkbox"]:checked+label:before {
 .booking-table{    margin-bottom: 60px; border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
   &__row{font-family: Arial; cursor:pointer; display: flex;    flex-direction: row;    align-items: center;}
   &__row.active{ 
-    // .booking-table__col{height: 60px}
+    font-weight: bold;
     .booking-table__col:nth-child(odd){background-color: #dddddd}
     .booking-table__col:nth-child(even){background-color: #c0c0c0}
     .booking-table__btn-xs{
-      span{background: #ffffff;     color: #333; box-shadow: none;
-        &:before{ content: "у кошику";}
+      span{background: #ffffff; border-color: #fff; color: #333; box-shadow: none;
+        &:before{ content: "у кошику"; font-weight: bold;}
       }
     }
   }
@@ -1068,9 +1085,16 @@ input[type="checkbox"]:checked+label:before {
   &__count, &__price{font-size: 16px;}
   &__place{font-size: 16px;   font-weight: bold;    padding-left: 22px;    font-family: Arial;}
   &__btn-xs{
-    span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; background: #fff;
-        &:before{content: "у кошик"; position: absolute;}
+    span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; border: 1px solid #c7c7c7; background: #e6e6e6;
+        &:before{content: "у кошик"; position: absolute; font-weight: 300;}
         }
+    }
+    .button:hover{
+      span{
+        background-color: #fff;
+        color: #333;
+        border-color: #fff;
+      }
     }
 }
 .booking-table .mCustomScrollBox {
@@ -1437,6 +1461,14 @@ input[type="checkbox"]:checked+label:before {
       margin: 15px 0px 13px 20px;
     }
   }
+  &__item.active{
+    box-shadow: 0px 7px 25px -4px #717171;
+    .news__item__img{
+      &:before{
+        opacity: 0.9;
+      }
+    }
+  }
   &__item{
     font-family: Arial;
     box-shadow: 0px 7px 25px -4px #9c9c9c;
@@ -1447,7 +1479,7 @@ input[type="checkbox"]:checked+label:before {
       box-shadow: 0px 7px 25px -4px #717171;
       .news__item__img{
         &:before{
-          opacity: 0.9;
+          opacity: 0.8;
         }
       }
     }
@@ -1461,7 +1493,7 @@ input[type="checkbox"]:checked+label:before {
         top: 0;
         width: 100%;
         height: 100%;
-        background: #333;
+        background: #000;
         opacity: 0.5;
         transition: opacity 0.2s;
       }
@@ -1534,7 +1566,22 @@ input[type="checkbox"]:checked+label:before {
   }
 }
 //LCabinet
+.lCabinet__group.noavaliable{
+  background-color: #bababa;
+  .lCabinet__group__content, .lCabinet__group__text{
+    background-color: #b0b0b0;
+    color: #fff;
+  }
+  .lCabinet__group__header{
+    background-color: #bababa;
+    color: #fff;
+  }
+  .button{
+      span{ color: #fff; background: #bababa; border: 2px solid #fff;   box-shadow: none;  }
+    }
+}
 .lCabinet{
+
   &__col-left{
     width: 264px;
   }
@@ -1560,11 +1607,9 @@ input[type="checkbox"]:checked+label:before {
     margin-top: 50px;
   }
   &__addCard{
-    background-color: #bababa;
     border-radius: 4px;
     overflow: hidden;
     &__text{
-      background-color: #b0b0b0;
       display: block;
       color: #fff;
       text-align: center;
@@ -1576,9 +1621,23 @@ input[type="checkbox"]:checked+label:before {
     }
   }
   &__group{
+    .button{
+      span{  box-shadow: none; }
+      &:hover{ 
+        span{border: 2px solid #fff; background-color: #ffea00; color: #fff}
+      }
+    }
     &__btns{
       text-align: center;
       padding: 28px;
+    }
+    &__header{
+      background-color: #ffe000;
+      color: #fff;
+    }
+    &__content{
+      background-color: #ffea00;
+      color: #fff;
     }
   }
   &__nav-arrow{
@@ -1630,8 +1689,6 @@ input[type="checkbox"]:checked+label:before {
     }
   }
   &__bonus{
-    background-color: #ffea00;
-    color: #fff;
     font-family: Arial;
     text-align: center;
     &__btns{
@@ -1642,7 +1699,7 @@ input[type="checkbox"]:checked+label:before {
       font-size: 14px;
       padding: 20px;
       font-weight: bold;
-      background-color: #ffe000;
+      
     }
     &__text{
       padding-top: 12px;

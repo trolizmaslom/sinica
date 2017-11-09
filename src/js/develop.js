@@ -237,7 +237,7 @@ function slideRecomendlInit() {
 }
 function placeholder(){
     placeholderFocus ($('input + .placeholder'));
-    placeholderFocus ($('input + .plaseholder--help'));
+    // placeholderFocus ($('input + .plaseholder--help'));
 }
 function placeholderFocus (element){
     if(element> 0){
@@ -271,7 +271,9 @@ function placeholderHide(){
     }
 }
 function stylerForm(){
-    $('.jq-selectbox').styler();
+    $('.jq-selectbox').styler({
+        selectSmartPositioning: false
+    });
 }
 function inputNumber() {
     $(document).on('click', '.js-number-minus', function () {
@@ -323,11 +325,21 @@ var tabsCange = (function (){
     var $btn = $('.js-tab');
     var $tabBody = $(".js-tab-container");
     var $tabItem = $(".js-tab-item");
+    var $select = $('.jq-selectbox--tabs');
 
     $tabItem.eq(0).addClass('active');
     $btn.eq(0).addClass('active');
 
+    function initSelect(){
+      $('.js-tab-item.active').find($select).styler({
+          selectSmartPositioning: false
+      }).addClass('init');
+    }
 
+    if($tabItem.hasClass('active') && $select.length > 0){
+      initSelect();
+    }
+    
     $btn.on("click", function(e){
 
         e.preventDefault();
@@ -338,6 +350,7 @@ var tabsCange = (function (){
 
         if( $this.hasClass('active')){
             $this.toggleClass("active");
+            
         }else{
             $btn.removeClass('active');
             $this.addClass('active');
@@ -345,6 +358,10 @@ var tabsCange = (function (){
 
         if($btn.hasClass('active')){
             $tabBody.find($target).addClass("active");
+        }
+
+        if($('.js-tab-item.active').find($select).not('.init')){
+          initSelect()
         }
 
     });

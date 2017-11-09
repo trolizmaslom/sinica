@@ -192,17 +192,20 @@ input, textarea{
   }
   .placeholder{pointer-events: none; position: absolute; top: 12px;  left: 25px; transition:all 200ms; 
   }
-  .placeholder--help{
-        opacity: 0; font-family: Arial, sans-serif; pointer-events: none; position: absolute;    left: 25px; transition:all 200ms;
-   }
-  .placeholder--help.focus, input:focus ~ .placeholder--help{
-    top: 41px;
-    opacity: 1;
-  }
+  // .placeholder--help{
+  //       opacity: 0; font-family: Arial, sans-serif; pointer-events: none; position: absolute;    left: 25px; transition:all 200ms;
+  //  }
+  // .placeholder--help.focus, input:focus ~ .placeholder--help{
+  //   top: 41px;
+  //   opacity: 1;
+  // }
 .tel-mask{font-family: Arial, sans-serif}
  .placeholder.focus,
     input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
 /*END forms*/
+.icon-mail{
+  fill: #aeaeae;
+}
 /*popups*/
   .popup{ padding: 0; max-width: 794px; width: 100%;
     i{ font-weight: 700; color: #f00;}
@@ -730,6 +733,8 @@ input, textarea{
     align-items: center;
     border: 1px solid #c6c6c6;
     background-color: #fff;
+    text-decoration: none;
+    color: #333;
   }
   &__img{
     height: 205px; 
@@ -1083,6 +1088,15 @@ input[type="checkbox"]:checked+label:before {
   &__col_3{    width: 14%;}
   &__col_4{    width: 22%;}
   &__count, &__price{font-size: 16px;}
+  &__count{
+    color: #747474;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span{
+      text-align: center;
+    }
+  }
   &__place{font-size: 16px;   font-weight: bold;    padding-left: 22px;    font-family: Arial;}
   &__btn-xs{
     span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; border: 1px solid #c7c7c7; background: #e6e6e6;
@@ -1163,7 +1177,29 @@ input[type="checkbox"]:checked+label:before {
     .sidebar__item a {
       text-decoration: none;
       color: #000000; }
-
+.item-prod__img{
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    background-image: url(../images/icon-noimg.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  img{
+    z-index: 2;
+  }
+}
 .catalog {
   padding-bottom: 122px; }
   .catalog__nav {
@@ -1275,7 +1311,7 @@ input[type="checkbox"]:checked+label:before {
     margin-bottom: 30px;
     min-width: 263px;
     border: 1px solid #c6c6c6;
-    font-family: "Arial"; }
+    font-family: Arial, sans-serif; }
     .catalog .item-prod__img {
       min-height: 271px;
       display: flex;
@@ -1311,6 +1347,7 @@ input[type="checkbox"]:checked+label:before {
       text-align: center;
       border-radius: 50%;
       top: 17px;
+      z-index: 3;
       padding-top: 16px; }
   .catalog .action {
     position: relative; }
@@ -1326,11 +1363,13 @@ input[type="checkbox"]:checked+label:before {
       text-align: center;
       border-radius: 50%;
       top: 17px;
+      z-index: 3;
       padding-top: 19px; }
   .catalog .sale {
     position: relative; }
     .catalog .sale:before {
       content: "-25%";
+      z-index: 3;
       font-weight: 800;
       display: block;
       position: absolute;
@@ -1825,6 +1864,9 @@ input[type="checkbox"]:checked+label:before {
   &__button{
     margin-left: 18px;
     cursor: pointer;
+    input{
+      display: none;
+    }
   }
   .mCSB_scrollTools{
     width: 14px;

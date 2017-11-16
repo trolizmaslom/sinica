@@ -367,35 +367,32 @@ var tabsCange = (function (){
     });
 
 })();
-function cutText(){
-    var lenDescr = 82;
-    var descr = $('.news__item__text');
-    var lenDescrMain = 190;
-    var descrMain = $('.news__banner__text');
-    if(descr){
-        descr.each(function(){
-            var descrText = $(this).text();
-            var descrTextLenght = descrText.length;
-            if(descrTextLenght > lenDescr ){
-                descrText = descrText.substr(0, lenDescr);
-                descrText = descrText.replace(/\w+$/, '');
-                descrText += '...';
-                $(this).html(descrText);
-            }
-        })
-    }
-    if(descrMain){
-        descrMain.each(function(){
-            var descrText = $(this).text();
-            var descrTextLenght = descrText.length;
-            if(descrTextLenght > lenDescrMain ){
-                descrText = descrText.substr(0, lenDescrMain);
-                descrText = descrText.replace(/\w+$/, '');
-                descrText += '...';
-                $(this).html(descrText);
-            }
-        })
-    }
+// function cutText(){
+    // var lenDescr = 82;
+    // var descr = $('.news__item__text');
+    // var lenDescrMain = 190;
+    // var descrMain = $('.news__banner__text');
+    // if(descr){
+    //     descr.each(function(){
+    //         var descrText = $(this).text();
+    //         var descrTextLenght = descrText.length;
+    //         if(descrTextLenght > lenDescr ){
+    //             descrText = descrText.substr(0, lenDescr);
+    //             descrText = descrText.replace(/\w+$/, '');
+    //             descrText += '...';
+    //             $(this).html(descrText);
+    //         }
+    //     })
+    // }
+// }
+function dotText(){
+  $('.news__banner__text, .news__item__text').dotdotdot({
+    watch: "window",
+    ellipsis: "\u2026 ",
+     keep: null,
+    truncate: "letter"
+  })
+
 }
 function showDetailProdPopup(){
     var detailProd = $('.js-showDetailProd');
@@ -408,7 +405,7 @@ function showDetailProdPopup(){
     })
 }
 $(window).on("load",function(){
-    cutText();
+    // cutText();
   $(".js-custom-scroll").mCustomScrollbar({
     "theme" : "dark-2"
     });
@@ -420,6 +417,7 @@ $(window).on("load",function(){
     });
 });
 $(document).ready(function(){
+    dotText();
     slideRecomendlInit();
     showDetailProdPopup();
     autocompleteInit();

@@ -9,9 +9,20 @@
 	.header__telserch{ margin-right: 220px;}
 	.header__logo{ margin-left: 50px;}
 }
-
+@media screen and (max-width: 1300px){
+	.recomend:before{
+		width: 100%;
+		left: inherit;
+	}
+}
+@media screen and (max-width: 1150px){
+	.catalog__items-wrap{
+		justify-content: space-around;
+	}
+}
 @media screen and (max-width: 1100px){
 	.footer__social{ padding-left: 20px;}
+	.product-cart__title{line-height: inherit;}
 }
 @media screen and (max-width: 992px){
 	.left-menu__content{overflow-y: scroll;}
@@ -23,9 +34,9 @@
 	.header__tel{ display: none;}
 	.header__butter{ position: fixed; top: 10px;}
 	.header__logo{ margin-left: 0;}
-	.top-slider__slide h2{ font-size: 30px; letter-spacing: 0;}
+	.top-slider__slide h2{ font-size: 38px; letter-spacing: 0;}
 	.article__title{padding-bottom: 20px;}
-	h2, .article__title{ font-size: 30px;}
+	h2, .article__title, .product-cart__title{ font-size: 38px;}
 	h3{ font-size: 20px;}
 	.top-slider__slide .button{ margin-top: 20px;}
 	.top-slider{ min-height: 1px; padding-top: 30px;}
@@ -56,7 +67,19 @@
 	.btable__input--finally{margin-bottom: 0;}
 	.article__img--right{ margin: 0 0 20px 20px; width: 50%;}
 	.article__img--left{margin: 5px 20px 20px 0; width: 50%;}
-
+	.lCabinet{
+		&__cols{flex-wrap: wrap;}
+		&__col-right{margin: 0; padding:0; width: 100%;}
+		&__col-left{width: 100%; margin-bottom: 20px;}
+		&__group{ width: 264px; margin: 0 auto;}
+		&__tabs_item{margin-top: 20px;}
+	}
+	.wrap-lCabinet-steps{margin-top:40px; margin-bottom: 70px;}
+	.lCabinet__form{margin: 40px 15px 15px 25px;
+		&__item{padding: 0 10px 0 0;}
+	}
+	.product-cart__col-left{width: 40%; min-width: 350px;}
+	.product-cart__col-right{width: 60%;}
 
 }
 @media screen and (max-width: 924px){
@@ -64,6 +87,12 @@
 	.news__items{justify-content: space-around;}
 	.news__item-wrap{width: 361px;}
 	.news__item-wrap:nth-child(n) .news__item{margin: 15px}
+	.booking-table{
+		&__col_1{width: calc(100% - 400px);}
+		&__col_2{width: 100px;}
+		&__col_3{ width: 120px;}
+		&__col_4{ width: 180px;}
+	}
 }
 @media screen and (max-width: 767px){
 	.header__row{ flex-direction: column; align-items: center; justify-content: center;}
@@ -73,14 +102,23 @@
 	.about__left{ padding-right: 0;}
 	.btable__select .jq-selectbox{width: 100%}
 	.article__img--right, .article__img--left{ float: none; text-align: center; width: 100%; margin: 10px 0}
-
+	.lCabinet__form{flex-direction: column;   margin: 30px 15px 15px;}
+	.lCabinet__form__item{ padding: 0; margin: 0 auto 15px; width: 100%}
+	.chat{padding: 25px 25px 15px;
+		&__bottom{margin-bottom: 10px;}
+		&__plane{margin-bottom: 20px}
+		&__message-wrap{padding-top: 15px; padding-bottom: 10px; padding-right: 0}
+	}
+	.product-cart{flex-wrap:wrap;     justify-content: center;}
+	.product-cart__col-left{width: 100%; margin-bottom: 20px;}
+	.product-cart__col-right{width: 100%;}
 }
 @media screen and (max-width: 666px){
 	.top-slider__slide{ flex-direction: column-reverse; align-items: center;}
 	.top-slider__right{ width: 150px;}
 	.top-slider__left{ text-align: center; width: 100%;}
 	.paginator{ width: 300px; left: calc(50% - 150px);}
-	.actual .slick-dots{ top: -38px;}
+	.actual .slick-dots, .recomend .slick-dots{ top: -38px;}
 	.btable{
 		&__row{margin: 35px 30px 0;}
 		&__col_1{flex-wrap: wrap;}
@@ -93,7 +131,7 @@
 	.news__banner__title{font-size: 23px;}
 	.news__banner__header{font-size: 18px}
 	.news__items{margin-top: 15px;}
-	h2 {font-size: 35px;}
+	h2, .product-cart__title {font-size: 35px;}
 	.news__wrap-title h2{padding: 20px 0;}
 	.news__wrap-title{flex-direction: column;}
 	.catalog__nav-pages{width: 100%; text-align: right}
@@ -103,7 +141,20 @@
 	.basket__tabs_item_3 .btable__row{margin: 30px 30px 0; padding-bottom: 30px}
 	.btable__callback-wrap{padding: 0 30px 30px;}
 	.article__content-wrap{padding: 15px 0;}
-
+	.lCabinet__catalog__items-wrap{padding-bottom: 20px;}
+	.catalog{padding-bottom: 50px}
+	.recomend{padding-bottom: 120px;}
+	.product-cart{margin-top: 50px; margin-bottom: 40px;}
+	.saleBlock__wrap{padding: 10px 10px 10px 60px;}
+	.icon-attention:before{left: -50px;}
+	.product-cart__subtitle{margin-bottom: 30px;}
+	.booking__btns .button{margin-bottom: 20px;}
+	.booking-table{margin-bottom: 30px;}
+	.booking{margin-bottom: 50px;}
+	.booking-table{
+		&__col_1{width: 220px;}
+	}
+	.product-cart__instruction{margin: 0}
 }
 @media screen and (max-width: 479px){
 	.form_row--between-reg{flex-wrap: wrap; justify-content: center;}
@@ -129,7 +180,14 @@
 	.news__nav_footer{padding: 25px 0;}
 	.footer__contact{margin-bottom: 15px;}
 	h2, .article__title{ font-size: 26px;}
-
+	.catalog__nav{flex-direction: column}
+	.catalog__nav-filter{ margin-bottom: 20px;}
+	.chat { padding: 5px 5px 5px;}
+	.product-cart__title{margin-bottom: 15px;}
+	.product-cart__subtitle{margin-bottom: 20px;}
+	.product-cart__title{font-size: 28px}
+	.product-cart__description{margin-bottom: 15px;}
+	.product-cart__col-left{min-width: inherit;}
 }
 @media screen and (max-width: 425px){
 	.btable{
@@ -141,9 +199,15 @@
 	.btn-tabs.active:after{border-width: 23px 0 23px 10px;}
 	.btn-tabs{font-size: 14px; 	padding: 15px 9px;	}
 	.tabs-circle{padding-left: 10px;}
-	.news__nav_footer{flex-direction: column-reverse;}
+	.news__nav_footer, .catalog__nav_footer{flex-direction: column-reverse;}
 	.btable__col-right{    flex-direction: column; align-items: left;}
 	.basket__person{text-align: left}
+	.lCabinet__form{margin: 15px 5px 5px;}
+	.recomend__slide{padding: 20px 15px;}
+	.product-cart__footer{flex-direction: column; align-items: flex-end;}
+	.product-cart__price{margin-bottom: 15px; font-size: 24px}
+	.product-cart__title{font-size: 22px;}
+	.product-cart__subtitle{font-size: 14px;}
 }
 @media screen and (max-width: 360px){
 	.news__item-wrap{width: 100%}

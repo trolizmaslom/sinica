@@ -218,6 +218,7 @@ function slideRecomendlInit() {
             speed: 500,
             responsive: [
                 {
+
                     breakpoint: 1116,
                     settings: {
                         slidesToShow: 2,
@@ -225,7 +226,7 @@ function slideRecomendlInit() {
                     }
                 },
                 {
-                    breakpoint: 760,
+                    breakpoint: 666,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -405,7 +406,6 @@ function showDetailProdPopup(){
     })
 }
 $(window).on("load",function(){
-    // cutText();
   $(".js-custom-scroll").mCustomScrollbar({
     "theme" : "dark-2"
     });
@@ -413,7 +413,9 @@ $(window).on("load",function(){
     "theme" : "dark-3"
     });
   $(".js-booking-scroll").mCustomScrollbar({
-    "theme" : "dark-2"
+    axis :"yx",
+    theme : "dark-2",
+    
     });
 });
 $(document).ready(function(){

@@ -516,6 +516,7 @@ input, textarea{
     list-style-type: none;
     flex-direction: row;
     margin: 20px 0;
+    flex-wrap: wrap;
     a{
       text-decoration: none;
       color: #575757;
@@ -723,10 +724,8 @@ input, textarea{
   }
   &__slide-wrap{
     // width: 31.5%;
-    max-width: 365px;
+    // max-width: 365px;
     margin: 0 15px;
-    display: flex;
-    flex-direction: column;
   }
   &__slide{
     padding: 33px;
@@ -1075,7 +1074,7 @@ input[type="checkbox"]:checked+label:before {
   }
 }
 .booking-table{    margin-bottom: 60px; border: 1px solid #d9d9d9; border-radius: 2px; display: flex;  flex-direction: column;
-  &__row{font-family: Arial; cursor:pointer; display: flex;    flex-direction: row;    align-items: center;}
+  &__row{ min-width: 600px; font-family: Arial; cursor:pointer; display: flex;    flex-direction: row;    align-items: center;}
   &__row.active{ 
     font-weight: bold;
     .booking-table__col:nth-child(odd){background-color: #dddddd}
@@ -1095,11 +1094,7 @@ input[type="checkbox"]:checked+label:before {
   &__col_3{    width: 14%;}
   &__col_4{    width: 22%;}
   &__count, &__price{font-size: 16px;}
-  &__count{
-    color: #747474;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  &__count{ color: #747474; display: flex; flex-direction: column;justify-content: center;
     span{
       text-align: center;
     }
@@ -1121,15 +1116,17 @@ input[type="checkbox"]:checked+label:before {
 .booking-table .mCustomScrollBox {
     height: 310px;
 }
-.booking-table .mCSB_inside > .mCSB_container{
-  margin-right: 0;
-}
-.booking-table .mCSB_scrollTools .mCSB_draggerContainer{ background: #fff;  position: absolute;  top: 10px;   left: -6px;  width: 16px;  bottom: 4px;     border-radius: 2px;}
-.booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.booking-table .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
-.booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
+.booking-table .mCSB_inside > .mCSB_container_wrapper{ margin: 0;}
+.booking-table .mCSB_container_wrapper > .mCSB_container{padding-right: 0; padding-bottom: 0}
+.booking-table .mCSB_scrollTools_vertical .mCSB_draggerContainer { background: #fff;  position: absolute;  top: 10px;   left: -6px;  width: 16px;  bottom: 4px;     border-radius: 2px;}
+.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar,.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
+.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
 .booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{background-color: #fff;}
+.booking-table #mCSB_2_scrollbar_horizontal .mCSB_draggerContainer{background: #fff; width: 100%}
+.booking-table .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ background: #fff;}
+.booking-table .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{  border-radius: 4px; height: 6px; width: 95%; background-color: #959595; margin-left: 5px;}
 .booking{    margin-bottom: 115px;
-  &__btns{    margin-bottom: 30px; display: flex;   flex-direction: row;  justify-content: flex-end;
+  &__btns{    margin-bottom: 30px; display: flex; flex-wrap:wrap;  flex-direction: row;  justify-content: flex-end;
     span{    width: 250px;     letter-spacing: -0.5px;}
     .button{    margin-left: 45px;}
   }
@@ -1142,15 +1139,8 @@ input[type="checkbox"]:checked+label:before {
 }
 .test-popup{ display: block;
  a{ font-size: 25px;     display: inline-block; color: #333; text-decoration: none; border: 1px solid #333; padding: 15px; margin-bottom: 15px;}}
-// .mbox_catalog {
-//   padding-top: 7px;
-//   padding-right: 13px; }
 
 .main__col {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 7px; }
 
@@ -1213,6 +1203,7 @@ input[type="checkbox"]:checked+label:before {
     display: flex;
     justify-content: space-between; }
   .catalog__nav-filter {
+    min-width: 270px;
     display: flex;
     flex-direction: row; }
   .catalog__nav-title {

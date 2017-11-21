@@ -424,9 +424,8 @@ input, textarea{
 /*actual*/
   .actual{ position: relative; overflow: hidden; padding-top: 119px;
     &:before{content: ''; background-color: #ffea00; width: 1280px; height: 393px; position: absolute; left:calc(50%  - 640px); top: 142px;}
-    h2{  margin-bottom: 52px;}
+    h2{  margin-bottom: 52px; margin-top: 3px;}
     &__slider{ margin: 0 -10px;}
-    &__slide-wrap{}
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start;}
     &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 auto;  background-color: #fff;
       &:hover{text-decoration: none;
@@ -449,7 +448,7 @@ input, textarea{
         &:hover{ text-decoration: underline;}
         }
     }
-    .slick-dots{bottom: auto; top: -84px; text-align: right;}
+    .slick-dots{bottom: auto; top: -98px; right: 8px; text-align: right;}
     .slick-dots li button{ width: 12px; height: 12px; border: 1px solid #000; border-radius:50%;}
     .slick-dots li.slick-active button{ background-color: #000;}
     .slick-dots li { width: 12px; height: 12px;}
@@ -458,14 +457,16 @@ input, textarea{
 /*slick-arrow*/
 .slick-arrow{
   font-size: inherit;
-  height: 20px;
-  width: 20px;
+  height: 13px;
+  width: 13px;
   transform: rotate(45deg);
   cursor: pointer;
   z-index: 1;
+  top: -50px;
 }
 .slick-prev{
-  left: 10px;
+  left: inherit;
+  right: 30px;
   border-bottom: 2px solid #333;
   border-left: 2px solid #333;
   &:before{
@@ -1234,7 +1235,7 @@ input[type="checkbox"]:checked+label:before {
   .catalog__nav {
     display: flex;
     justify-content: space-between; }
-  .catalog__nav-filter {
+  .catalog__nav-sort {
     min-width: 270px;
     display: flex;
     flex-direction: row; }
@@ -2137,4 +2138,24 @@ input[type="checkbox"]:checked+label:before {
 }
 .buttonWrap{
   margin-top: 25px;
+}
+.mob_SortFilter{
+  width: 100%;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+  }
+  &__item{
+    list-style-type: none;
+    width: 50%;
+    text-align: center;
+    &:first-child{border-right: 1px solid #0f0f0f}
+    a{
+      color: #0f0f0f;
+      text-decoration: none;
+    }
+  }
 }

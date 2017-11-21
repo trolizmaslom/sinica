@@ -265,8 +265,8 @@ input, textarea{
     header{ position: relative; z-index: 999;}
     .header{ position: relative; border-bottom:1px solid #c6c6c6;
         &__butter{ position: absolute; left: 37px; top: 50px; z-index: 400;}
-        &__butter-button{ cursor: pointer; position: relative;
-          span{ background-image: url(../images/butter.png);  background-position: 7px 1px; width: 40px; height: 40px; background-repeat: no-repeat; display: block;
+        &__butter-button{ cursor: pointer; position: relative; 
+          span{ background-image: url(../images/butter.png);  background-position: 7px 1px; width: 40px; height: 28px; background-repeat: no-repeat; display: block;
             &:hover{ background-image: url(../images/butter-h.png); background-position: 0 0;}
           }
         }
@@ -296,6 +296,7 @@ input, textarea{
           }
         }
         &__cabinet{ position: absolute; top: 44px; right: 16px; z-index: 300;}
+        &__cabinet.active{ z-index: 9999;}
     }
     .search-style{ list-style-type: none; background-color: rgb(255, 255, 255); box-shadow: 2.248px 5.563px 12px 0px rgba(0, 0, 0, 0.12); padding: 20px; border-radius: 20px 15px 5px; width: 100%!important; position: absolute!important; top: calc(100% + 12px) !important; left: 0!important; font-weight: 100;
       li{ margin-bottom: 16px;}
@@ -353,14 +354,18 @@ input, textarea{
       }
       &__content{ padding-top: 43px; overflow-y:auto;        height: 100%;
         ul{ list-style-type: none; width: 100%; font-family:'futura'; text-transform: uppercase; padding: 0; margin: 0;}
-        li{ border-bottom:1px solid #f6f6f6; position: relative; width: 100%; padding:0px 8px 0px 17px;   height: 43px; display: flex; justify-content: flex-start; align-items: center;}
+        &__item{border-bottom: 2px solid #d6d6d6; padding:10px 8px 10px 9px;
+          li:not(:last-child){border-bottom: 1px solid #f6f6f6; }
+          li{ padding: 0px 8px 0px 9px;}
+        }
+        &__item:last-child{border:none;}
+        li{  position: relative; width: 100%;    min-height: 43px; display: flex; justify-content: flex-start; align-items: center;}
         a{ color: #292929; text-decoration: none;
           &:before{content: ''; position: absolute; right: 60px; top: 15px; width: 10px; height: 10px;border-radius: 50%; background-color: #ffea00; transition: all 100ms; opacity: 0;}
           &:hover:before{ opacity: 1; right: 20px;}
         }
       }
-      &__group{ display: none;}
-      &__main{}
+      &__group.left-menu__content__item{ display: none;}
     }
     @keyframes tel {
       0%{transform:scaleX(1);}
@@ -393,7 +398,7 @@ input, textarea{
 /*top-slider*/
   .top-slider{ background-image: url(../images/dotted.jpg); background-repeat: repeat; border-bottom:1px solid #c6c6c6; padding-top: 66px; padding-bottom: 20px; min-height: 713px;
     &__content{ position: relative;}
-    &__left{ width: 472px; padding-top: 89px;}
+    &__left{ width: 472px; padding-top: 89px; user-select: text;}
     &__right{ width: 668px;}
     &__slide-wrap{ padding: 0 10px; }
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start; width: 100%;
@@ -431,8 +436,9 @@ input, textarea{
       img{ position: relative; z-index: 5; margin: 0 auto; object-fit: cover; height: 100%; width: 100%;}
       h4{ font-size: 24px; font-weight: 800;}
       h6{ font-weight: 400; text-transform: uppercase; font-size: 11px; margin: 14px 0 17px;}
-      p{ line-height: 1.571; height: 63px;}
+      
     }
+    &__text{ line-height: 1.571; height: 63px; display: block;     overflow: hidden;}
     &__img{ width: 100%; position: relative; height: 393px; margin-bottom: 24px;
       &:before{ content: ''; background-color: rgba(0,0,0,0.7); position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; z-index: 10;}
     }
@@ -449,7 +455,33 @@ input, textarea{
     .slick-dots li { width: 12px; height: 12px;}
   }
 /*END actual*/
-
+/*slick-arrow*/
+.slick-arrow{
+  font-size: inherit;
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  z-index: 1;
+}
+.slick-prev{
+  left: 10px;
+  border-bottom: 2px solid #333;
+  border-left: 2px solid #333;
+  &:before{
+    content: "";
+  }
+}
+.slick-next{
+  right: 10px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  &:before{
+    content: "";
+  }
+}
+.slick-arrow.slick-disabled{opacity: 0.5}
+/*end slick-arrow*/
 /*about*/
   .about{ position: relative; padding-top: 117px; padding-bottom: 80px; overflow: hidden;
     h2{ margin-bottom: 44px;}
@@ -1089,7 +1121,7 @@ input[type="checkbox"]:checked+label:before {
   &__col:nth-child(odd){background-color: #f2f2f2; border-bottom: 1px solid #d9d9d9;}
   &__row:last-child{.booking-table__col:last-child{border-bottom: none;}}
   &__col{height: 50px; display: flex;   align-items: center;    justify-content: center;}
-  &__col_1{    width: 57%; justify-content: flex-start}
+  &__col_1{    width: 57%; justify-content: flex-start; flex-shrink:0;}
   &__col_2{    width: 8%;}
   &__col_3{    width: 14%;}
   &__col_4{    width: 22%;}
@@ -1099,7 +1131,7 @@ input[type="checkbox"]:checked+label:before {
       text-align: center;
     }
   }
-  &__place{font-size: 16px;   font-weight: bold;    padding-left: 22px;    font-family: Arial;}
+  &__place{font-size: 16px; padding-right: 10px; width: 100%; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-weight: bold;    padding-left: 22px;    font-family: Arial;}
   &__btn-xs{
     span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; border: 1px solid #c7c7c7; background: #e6e6e6;
         &:before{content: "зарезервувати"; position: absolute; font-weight: 300;}

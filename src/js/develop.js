@@ -28,31 +28,30 @@ function loginClick(){
                 menu.stop().slideUp(100);
             }
         });
-
     }
 }
 function logRegClick(){
-    var butt = $('.login-pop>a');
+    var butt = $('.login-pop>a, .js-loginClick');
     var menu = $('.login-pop__menu-wrap');
     var layer = $('.js-login-pop-layer');
+    var menuParent = $('.header__cabinet');
+
     if(butt.length > 0){
         butt.click(function (e) {
             e.preventDefault();
-            butt.toggleClass('active');
+            $(this).toggleClass('active');
             layer.addClass('active');
-            if(butt.hasClass('active')){
+            menuParent.toggleClass('active');
+            if($(this).hasClass('active')){
                 menu.stop().slideDown(100);
             }else{
                 menu.stop().slideUp(100);
             }
         });
         layer.click(function(){
-            butt.toggleClass('active');
-            if(butt.hasClass('active')){
-                menu.stop().slideDown(100);
-            }else{
-                menu.stop().slideUp(100);
-            }
+            butt.removeClass('active');
+            menuParent.removeClass('active');
+            menu.stop().slideUp(100);
             $(this).removeClass('active');
         })
     }
@@ -94,6 +93,7 @@ function slideInit() {
             infinite: false,
             speed: 500,
             fade: true,
+            swipe: false,
             cssEase: 'linear'
         });
     }
@@ -152,9 +152,11 @@ function paginator(){
             lastX = parseInt($('.paginator__pin').css('left'));
             $('.top-slider__wrap').slick('slickGoTo',cur);
         }
-        document.onmousemove = onMouseMove;
-        document.onmouseup = onMouseUp;
-        document.onmousedown = onMouseDown;
+        var paginator = $('.paginator')[0];
+            paginator.onmousemove = onMouseMove;
+            paginator.onmouseup = onMouseUp;
+            paginator.onmousedown = onMouseDown
+          
         area.click(function (e) {
             var x = e.offsetX == undefined ? e.layerX : e.offsetX;
             var cur = parseInt(x / step);
@@ -197,14 +199,15 @@ function slideActualInit() {
                 {
                     breakpoint: 760,
                     settings: {
+                        dots: false,
+                        arrows: true,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                     }
                 }
             ]
         });
-    }
-    
+    }   
 }
 function slideRecomendlInit() {
     var slide2 = $('.recomend__slider-wrap');
@@ -228,6 +231,8 @@ function slideRecomendlInit() {
                 {
                     breakpoint: 666,
                     settings: {
+                        dots: false,
+                        arrows: true,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                     }
@@ -368,26 +373,8 @@ var tabsCange = (function (){
     });
 
 })();
-// function cutText(){
-    // var lenDescr = 82;
-    // var descr = $('.news__item__text');
-    // var lenDescrMain = 190;
-    // var descrMain = $('.news__banner__text');
-    // if(descr){
-    //     descr.each(function(){
-    //         var descrText = $(this).text();
-    //         var descrTextLenght = descrText.length;
-    //         if(descrTextLenght > lenDescr ){
-    //             descrText = descrText.substr(0, lenDescr);
-    //             descrText = descrText.replace(/\w+$/, '');
-    //             descrText += '...';
-    //             $(this).html(descrText);
-    //         }
-    //     })
-    // }
-// }
 function dotText(){
-  $('.news__banner__text, .news__item__text').dotdotdot({
+  $('.news__banner__text, .news__item__text, .actual__text').dotdotdot({
     watch: "window",
     ellipsis: "\u2026 ",
      keep: null,
@@ -419,7 +406,6 @@ $(window).on("load",function(){
     });
 });
 $(document).ready(function(){
-    dotText();
     slideRecomendlInit();
     showDetailProdPopup();
     autocompleteInit();
@@ -433,4 +419,5 @@ $(document).ready(function(){
     stylerForm();
     inputNumber();
     placeholderHide();
+    dotText();
 });

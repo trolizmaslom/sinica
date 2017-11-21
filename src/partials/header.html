@@ -7,28 +7,35 @@
                 <div class="left-menu__wrap">
                     <div class="left-menu__close"><button><span></span><span></span></button></div>
                     <div class="left-menu__content">
-                        <div class="left-menu__group">
+                      <ul>
+                        <li class="left-menu__content__item left-menu__group">
                             <ul>
                                 <li><a href="catalog.html">Медикаменти</a></li>
-                                <li><a href="#">Лікувальна косметика</a></li>
-                                <li><a href="#">Мама та маля</a></li>
-                                <li><a href="#">Особиста гігієна</a></li>
-                                <li><a href="#">Медичні товари</a></li>
-                                <li><a href="#">Вітаміни. Бади. Трави</a></li>
+                                <li> <a href="#">лікувальна косметика</a></li>
+                                <li><a href="#">мама та маля</a></li>
+                                <li><a href="#">особиста гігієна</a></li>
+                                <li><a href="#">медичні товари</a></li>
+                                <li><a href="#">вітаміни. бади. трави</a></li>
                             </ul>
-                        </div>
-                        <div class="left-menu__main">
-                            <ul>
-                                <li><a href="news.html">Новини</a></li>
-                                <li><a href="#">Блог</a></li>
-                                <li><a href="#">Робота у нас</a></li>
-                                <li><a href="#">Вигідні пропозиції</a></li>
-                                <li><a href="#">Календар подій</a></li>
-                                <li><a href="#">Тематика місяця</a></li>
-                                <li><a href="#">Бонусна програма</a></li>
-                                <li><a href="#">Резерв та замовлення</a></li>
-                            </ul>
-                        </div>
+                        </li>
+                        <li class="left-menu__content__item left-menu__group">
+                          <ul>
+                            <li><a href="#" class="js-loginClick">особистий кабінет</a></li>
+                          </ul>
+                        </li>
+                        <li class="left-menu__content__item">
+                          <ul>
+                              <li><a href="news.html">новини</a></li>
+                              <li> <a href="#">блог</a></li>
+                              <li><a href="#">робота у нас</a></li>
+                              <li><a href="#">вигідні пропозиції</a></li>
+                              <li><a href="#">календар подій</a></li>
+                              <li><a href="#">тематика місяця</a></li>
+                              <li><a href="#">бонусна програма</a></li>
+                              <li><a href="#">резерв та замовлення</a></li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
                 </div>
                 <div class="layer js-layer-close"></div>
@@ -40,11 +47,11 @@
                     <a href="index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
                     <div class="header__telserch">
                         <div class="header__search" title="Пошук">
-                            <input type="text" placeholder="Знайдіть потрібне" id="search">
+                            <input type="text" placeholder="Пошук" id="search">
 
                         </div>
                         <div class="header__tel">
-                            <p>Аптечна довідка:</p>
+                            <p class="header__tel__title">Аптечна довідка:</p>
                             <p><a href="tel:0 (800) 30 18 18">0 (800) 30 18 18</a></p>
                         </div>
                     </div>
@@ -64,45 +71,49 @@
         </div>
         <div class="header__cabinet cabinet">
             <div class="cabinet__item" title="Карта аптек"><a href="#"  ><span class="cabinet__market" ></span></a></div>
-            <div class="cabinet__item" title="Корзина"><a href="basket.html"  ><span class="cabinet__basket" ></span> <span class="cabinet__basketCount">2</span></a></div>
-            <div class="cabinet__item login-pop" title="Особистий кабінет"><a href="#"  ><span class="cabinet__user"  ></span></a>
-                <div class="js-login-pop-layer"></div>
-                <div class="login-pop__menu-wrap">
-                    <div class="login-pop__menu">
-                        <div class="login-pop__title"><span>Вхід в особистий кабінет</span></div>
-                        <div class="login-pop__content">
-                            <form action="ajax.php" class="login-pop__form">
-                                <div class="form_row">
-                                    <div class="form_input">
-                                        <input type="email" name="contact_mail" required="required" value="" >
-                                        <div class="placeholder">Введіть E-mail</div>
-                                    </div>
-                                </div>
-                                <div class="form_row">
-                                    <div class="form_input">
-                                        <input type="password" name="contact_pass" required="required" value="">
-                                        <div class="placeholder">Пароль</div>
-                                    </div>
-                                </div>
-                                <div class="form_row form_row--between">
-                                    <label><input type="checkbox"><i></i><span>Запам’ятати мене</span></label>
-                                    <a data-fancybox href="javascript:;" data-src="#popup-lost">Забули пароль?</a>
-                                </div>
-                                <div class="form_row">
-                                    <button class="button button--reverse"><span>Вхід</span></button>
-                                </div>
-                            </form>
-                            <div class="login-pop__socials">
-                                <h6>Увійти через соц мережі:</h6>
-                                <p>
-                                    <a href="#" class="icon icon--white"><span><img src="images/ic6-w.png" alt=""></span></a>
-                                    <a href="#" class="icon icon--white"><span><img src="images/ic7-w.png" alt=""></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="login-pop__register"><a data-fancybox href="javascript:;" data-src="#popup-reg">Зареєструватися</a></div>
-                    </div>
-                </div>
+            <div class="cabinet__item" title="Корзина">
+              <a href="basket.html"  ><span class="cabinet__basket" ></span> <span class="cabinet__basketCount">2</span></a>
+            </div>
+            <div class="cabinet__item login-pop" title="Особистий кабінет">
+              <a href="#"><span class="cabinet__user"></span>
+              </a>
+              <div class="js-login-pop-layer"></div>
+              <div class="login-pop__menu-wrap">
+                  <div class="login-pop__menu">
+                      <div class="login-pop__title"><span>Вхід в особистий кабінет</span></div>
+                      <div class="login-pop__content">
+                          <form action="ajax.php" class="login-pop__form">
+                              <div class="form_row">
+                                  <div class="form_input">
+                                      <input type="email" name="contact_mail" required="required" value="" >
+                                      <div class="placeholder">Введіть E-mail</div>
+                                  </div>
+                              </div>
+                              <div class="form_row">
+                                  <div class="form_input">
+                                      <input type="password" name="contact_pass" required="required" value="">
+                                      <div class="placeholder">Пароль</div>
+                                  </div>
+                              </div>
+                              <div class="form_row form_row--between">
+                                  <label><input type="checkbox"><i></i><span>Запам’ятати мене</span></label>
+                                  <a data-fancybox href="javascript:;" data-src="#popup-lost">Забули пароль?</a>
+                              </div>
+                              <div class="form_row">
+                                  <button class="button button--reverse"><span>Вхід</span></button>
+                              </div>
+                          </form>
+                          <div class="login-pop__socials">
+                              <h6>Увійти через соц мережі:</h6>
+                              <p>
+                                  <a href="#" class="icon icon--white"><span><img src="images/ic6-w.png" alt=""></span></a>
+                                  <a href="#" class="icon icon--white"><span><img src="images/ic7-w.png" alt=""></span></a>
+                              </p>
+                          </div>
+                      </div>
+                      <div class="login-pop__register"><a data-fancybox href="javascript:;" data-src="#popup-reg">Зареєструватися</a></div>
+                  </div>
+              </div>
             </div>
 
             <div class="cabinet__login"  style="display: none;">

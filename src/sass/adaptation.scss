@@ -26,17 +26,23 @@
 }
 @media screen and (max-width: 992px){
 	.left-menu__content{overflow-y: scroll;}
-	.left-menu__group{ display: block;}
+	.left-menu__group.left-menu__content__item{ display: block;}
 	.header__nav{ display: none;}
-	.header__cabinet{ flex-direction: column-reverse; top: 10px; position: fixed; height: auto;}
+	.header__cabinet{  flex-direction: column-reverse; top: 10px; position: fixed; height: auto;}
 	.cabinet__item{ margin-right: 0; margin-top: 10px;}
+	.cabinet__item.login-pop { margin-top: 0;
+		> a{height: 1px; overflow: hidden; visibility: hidden; }
+	}
 	.header__telserch{ margin-right: 70px; width: auto;}
-	.header__tel{ display: none;}
-	.header__butter{ position: fixed; top: 10px;}
-	.header__logo{ margin-left: 0;}
+	.header__tel{ position: absolute; left: 0; top: 100px; font-size: 12px;
+		a{font-size: 12px;}
+		&__title{display: none}
+	}
+	.header__butter{ position: fixed; top: 20px;}
+	.header__logo{ margin-left: 70px;}
 	.top-slider__slide h2{ font-size: 38px; letter-spacing: 0;}
 	.article__title{padding-bottom: 20px;}
-	h2, .article__title, .product-cart__title{ font-size: 38px;}
+	h2, .article__title, .product-cart__ttile{ font-size: 38px;}
 	h3{ font-size: 20px;}
 	.top-slider__slide .button{ margin-top: 20px;}
 	.top-slider{ min-height: 1px; padding-top: 30px;}
@@ -81,6 +87,7 @@
 	.product-cart__col-left{width: 40%; min-width: 350px;}
 	.product-cart__col-right{width: 60%;}
 
+
 }
 @media screen and (max-width: 924px){
 	.basket__box-left, .basket__box-right{padding: 0 15px;}
@@ -97,7 +104,7 @@
 @media screen and (max-width: 767px){
 	.header__row{ flex-direction: column; align-items: center; justify-content: center;}
 	.header__telserch{ margin-right: 0; margin-bottom: 20px;}
-	.header__logo{ margin-bottom: 30px; margin-top: 20px;}
+	.header__logo{ margin-bottom: 30px; margin-top: 20px; margin-left: 0;}
 	.actual__item h4{ font-size: 16px;}
 	.about__left{ padding-right: 0;}
 	.btable__select .jq-selectbox{width: 100%}
@@ -152,21 +159,24 @@
 	.booking-table{margin-bottom: 30px;}
 	.booking{margin-bottom: 50px;}
 	.booking-table{
-		&__col_1{width: 220px;}
+		&__col_1{width: 220px; min-width: 220px;}
 	}
 	.product-cart__instruction{margin: 0}
+	.header__search{width: 100%;}
+	.header__telserch{width: 100%; padding-right: 0}
+	.recomend__slider-wrap{margin: 0;}
+	.recomend__slider{width: 360px; margin: 0 auto}
 }
 @media screen and (max-width: 479px){
 	.form_row--between-reg{flex-wrap: wrap; justify-content: center;}
 	.popup-reg__button{ text-align: center;}
 	.login-pop__menu{ width: 300px;}
 	.header__cabinet{ position: absolute;}
-	.header__telserch,
-	.header__logo{ padding-right: 40px;}
-	.header__search{ width: 200px;}
+	.header__logo{ padding-right: 0px; max-width: 120px; margin-top: 50px;}
 	.left-menu__wrap{ width: 100%;}
 	.left-menu__content li{    padding: 12px 8px 16px 27px;}
-	.actual__item{ width: 100%;}
+	.actual__item, .recomend__slider{ width: 100%;}
+	.actual__item-wrap{padding: 0 15px;}
 	.actual__slider{ margin: 0;}
 	.about{ padding-top: 50px;}
 	.about:before{ top: 86px; height:calc(100% - 70px);}
@@ -180,6 +190,7 @@
 	.news__nav_footer{padding: 25px 0;}
 	.footer__contact{margin-bottom: 15px;}
 	h2, .article__title{ font-size: 26px;}
+	.article__title{ margin-bottom: 30px; margin-top: 45px;}
 	.catalog__nav{flex-direction: column}
 	.catalog__nav-filter{ margin-bottom: 20px;}
 	.chat { padding: 5px 5px 5px;}
@@ -188,6 +199,8 @@
 	.product-cart__title{font-size: 28px}
 	.product-cart__description{margin-bottom: 15px;}
 	.product-cart__col-left{min-width: inherit;}
+	.slick-prev{left: 0;}
+	.slick-next{right: 0;}
 }
 @media screen and (max-width: 425px){
 	.btable{

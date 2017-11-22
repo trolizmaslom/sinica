@@ -10,7 +10,18 @@
 				</ul>
 			</div>
 			<div class="main__col">
-				//= partials/mob_sort_filter.html
+				 <!-- mobSortFilter  -->
+					<div class="mob_SortFilter">
+						<ul class="mob_SortFilter__items">
+							<li class="mob_SortFilter__item">
+								<a href="#" data-menu="mobFilterCatalog" class="mob_SortFilter__item__link js-mobFilter">Фільтр</a>
+							</li>
+							<li class="mob_SortFilter__item">
+								<a href="#" data-menu="mobSort" class=" mob_SortFilter__item__link js-mobSort">Сортувати</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /mobSortFilter -->
 				<div class="main__col-left">
 					<div class="wrap-sidebar">
 						<div class="sidebar">
@@ -38,17 +49,7 @@
 				<div class="main__col-right">
 					<div class="catalog">
 						<div class="catalog__nav">
-							<div class="catalog__nav-sort">
-								<div class="catalog__nav-title">
-									Сортувати по:
-									<a href="#">Ціна</a>
-									<a href="#">Назва</a>
-								</div>
-								<div class="catalog__nav-arrow">
-									<a href="#" class="nav-arrow nav-arrow_top"></a>
-									<a href="#" class="nav-arrow nav-arrow_bot"></a>
-								</div>
-							</div>
+							//= partials/sort.html
 							<div class="catalog__nav-pages">
 								<a href="#">1</a>
 								<a href="#" class="active">2</a>
@@ -225,6 +226,7 @@
 				</div>
 			</div>
 		</div>
+		//= partials/mob_menuSortFilter.html
 		//= partials/hidden-block.html
 		 //= partials/footer.html
 </div>

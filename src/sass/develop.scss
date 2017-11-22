@@ -366,6 +366,7 @@ input, textarea{
         }
       }
       &__group.left-menu__content__item{ display: none;}
+      &__title{    line-height: 36px; color: #fff; padding-left: 18px; font-weight: 100;  letter-spacing: 1.5px;}
     }
     @keyframes tel {
       0%{transform:scaleX(1);}
@@ -952,8 +953,8 @@ input, textarea{
 .btn_row-delete:after {transform: rotate(-45deg);}
 .basket__tabs_item_3 .btable__row{margin: 40px 60px 0;  padding-bottom: 35px;}
 .banner{
-  &__inner{ position: relative;}
-  &__subtitle{    font-size: 17px;  margin-top: 28px;}
+  &__inner{ position: relative; min-height: 320px;}
+  &__subtitle{    font-size: 17px;  margin-top: 28px; padding-right: 10px;}
   &__title{    font-size: 61px; font-weight: 900;  margin-top: 8px;}
   &__inner-text{position: absolute; font-family: "Raleway";  top: 26%; left: 18%;}
   &__text{    font-size: 27px; font-weight: bold; text-transform: uppercase}
@@ -994,6 +995,22 @@ input, textarea{
   &__item-link.active:before{
     opacity: 1;
     bottom: -2px;
+  }
+}
+.suggest-banner{
+    position: absolute;
+    height: 320px;
+    width: 100%;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: url(../images/suggest-banner.jpg);
+    background-repeat: no-repeat;
   }
 }
 input[type=checkbox] {
@@ -2141,21 +2158,25 @@ input[type="checkbox"]:checked+label:before {
 }
 .mob_SortFilter{
   width: 100%;
+  margin-bottom: 15px;
   &__items{
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
-
   }
   &__item{
     list-style-type: none;
     width: 50%;
     text-align: center;
     &:first-child{border-right: 1px solid #0f0f0f}
-    a{
+    &__link{
       color: #0f0f0f;
       text-decoration: none;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

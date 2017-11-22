@@ -17,9 +17,7 @@
 }
 @media screen and (max-width: 1150px){
 
-	.catalog__items-wrap{
-		justify-content: space-around;
-	}
+	.catalog__items-wrap{justify-content: space-around;}
 }
 @media screen and (max-width: 1100px){
 	.paginator{ bottom: 0px;}
@@ -99,7 +97,24 @@
 	.footer__wrap{flex-direction: row;}
 	.footer__contact a:not(last-child){margin-bottom: 10px}
 	.footer__contact{ flex-direction:column; justify-content: center; align-items: flex-start; margin-bottom: 0}
-
+	.main__col-left, .catalog__nav-title{ width: 250px;  position: absolute;  left: -100%;  top: 0; background-color: #fff; height: 100%;}
+	.catalog__nav-sort--mob .catalog__nav-title{ left: inherit; position: relative;}
+	.catalog__nav-arrow, .catalog__nav-title span{ display: none;}
+	.catalog__nav-title{flex-direction: column; display: flex;}
+	.main__col-right{width: 100%; padding-left: 0;}
+	.sidebar__box{margin: 35px auto 0;}
+	.sidebar__title-category{text-align: center; padding: 0 10px;}
+	.catalog__items-wrap{padding-top: 35px; padding-bottom: 0;}
+	.sidebar__title{padding: 0 0 22px 18px;}
+	.sidebar{
+		ul{ padding: 10px 8px 10px 9px;}
+		&__item{
+			padding: 0px 26px 0px 9px;
+			border-bottom: 1px solid #f6f6f6;
+    	min-height: 43px;
+		}
+	}
+	.suggest-nav-wrap{display: none;}
 }
 @media screen and (max-width: 924px){
 	.basket__box-left, .basket__box-right{padding: 0 15px;}
@@ -112,13 +127,7 @@
 		&__col_3{ width: 120px;}
 		&__col_4{ width: 180px;}
 	}
-	.main__col-left{    
-		width: 250px;
-	    position: absolute;
-	    left: -100%;
-	    top: 0;
-	    background-color: #fff;
-	    height: 100%;}
+	
 }
 @media screen and (max-width: 767px){
 	.header__row{ flex-direction: column; align-items: center; justify-content: center;}
@@ -138,6 +147,14 @@
 	.product-cart{flex-wrap:wrap;     justify-content: center;}
 	.product-cart__col-left{width: 100%; margin-bottom: 20px;}
 	.product-cart__col-right{width: 100%;}
+	.suggest-banner{
+		&:before{
+			background: url(../images/suggest-banner_sm.jpg);
+			background-size: auto 100%;
+			background-position: center;
+		}
+	}
+	.banner__inner-text{ left: 30px;}
 	
 }
 @media screen and (max-width: 666px){
@@ -222,7 +239,12 @@
 	.cabinet__item { margin-right: 5px;
 		> a{height: 35px; width: 35px;}
 	}
-	
+	.banner{
+		&__title{font-size: 50px;}
+		&__text{font-size: 20px;}
+		&__inner-text{left: 25px;}
+		&__subtitle{font-size: 14px;}
+	}
 	.actual{
 		padding-top: 70px;
 		&:before{

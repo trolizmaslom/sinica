@@ -11,6 +11,18 @@
         </ul>
       </div>
       <div class="main__col">
+        <!-- mobSortFilter  -->
+          <div class="mob_SortFilter">
+            <ul class="mob_SortFilter__items">
+              <li class="mob_SortFilter__item">
+                <a href="#" data-menu="mobFilterProduct" class="mob_SortFilter__item__link js-mobFilter">Фільтр</a>
+              </li>
+              <li class="mob_SortFilter__item">
+                <a href="#" data-menu="mobSort" class=" mob_SortFilter__item__link js-mobSort">Сортувати</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /mobSortFilter -->
         <div class="main__col-left">
           <div class="wrap-sidebar">
             <div class="sidebar">
@@ -38,17 +50,7 @@
         <div class="main__col-right">
           <div class="catalog">
             <div class="catalog__nav">
-              <div class="catalog__nav-filter">
-                <div class="catalog__nav-title">
-                  Сортувати по:
-                  <a href="#">Ціна</a>
-                  <a href="#">Назва</a>
-                </div>
-                <div class="catalog__nav-arrow">
-                  <a href="#" class="nav-arrow nav-arrow_top"></a>
-                  <a href="#" class="nav-arrow nav-arrow_bot"></a>
-                </div>
-              </div>
+              //= partials/sort.html
               <div class="catalog__nav-pages">
                 <a href="#">1</a>
                 <a href="#" class="active">2</a>
@@ -207,7 +209,9 @@
               </a>
             </div>
             <div class="catalog__nav_footer">
-              <a href="#" class="button button--grey" tabindex="0"><span>Більше товарів</span></a>
+              <div class="buttonWrap">
+                <a href="#" class="button button--grey" tabindex="0"><span>Більше товарів</span></a>
+              </div>
               <div class="catalog__nav-pages">
                 <a href="#">1</a>
                 <a href="#">2</a>
@@ -223,42 +227,7 @@
         </div>
       </div>
     </div>
-    <div class="hidden-block">
-    
-        <div id="call_success">
-            <div class="call-success">
-                 <div class="call_success">
-                     <div class="call-title">Спасибо за заявку!</div>
-                     <div class="call-subtitle">Мы свяжемся с Вами в ближайшее время</div>
-                 </div>
-            </div>
-        </div>
-        <div class="popup popup-lost" id="popup-lost">
-            <div class="popup__title"><span>Приєднуйся до нас</span></div>
-            <div class="popup__content popup-lost__content">
-                <div class="popup__form">
-                    <form action="ajax.php">
-                        <div class="form_row form_row--center">
-                            <div class="form_input ">
-                                <input type="email" name="contact_email" required="required" value="" >
-                                <div class="placeholder">E-mail<i>*</i></div>
-                            </div>
-                        </div>
-                        <div class="form_row form_row--center">
-    
-                            <div class="form_input  popup-lost__button">
-                                <button class="button button--reverse"><span>Надіслати</span></button>
-                            </div>
-                        </div><div class="form_row form_row--center">
-                            <div class="form_input popup-reg__text">
-                                <p>Введи адресу електронної пошти, яку ти використовував при реєстрації та ми надішлемо тобі інструкції щодо скидання пароля..</p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    //= partials/mob_menuSortFilter.html
     //= partials/hidden-block.html
     //= partials/footer.html
 </div>

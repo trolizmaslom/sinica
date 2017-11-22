@@ -58,23 +58,27 @@ function logRegClick(){
 }
 //menuMob
 var menu = $('.left-menu');
-var butt = $('.header__butter-button');
+var butt = $('.js-butterButton, .js-mobSort, .js-mobFilter');
 function leftMenu(){
     var close = $('.left-menu__close button');
     var layer = $('.js-layer-close');
     var body = $('body');
     if(butt.length > 0){
-        butt.click(function (e) {
-            e.preventDefault();
-            butt.toggleClass('active');
-            if(butt.hasClass('active')){
-                menu.addClass('open');
-            }else{
-                menu.removeClass('open');
-            }
-        });
-        close.click(closeMenuMob)
-        layer.click(closeMenuMob)
+          butt.click(function(e){
+              $this = $(this);
+              var attr = $this.attr('data-menu');
+              console.log(attr);
+              e.preventDefault();
+              $this.toggleClass('active');
+              if($this.hasClass('active')){
+               $('.left-menu[data-menu="'+attr+'"]').addClass('open');
+              }
+              else{
+                  menu.removeClass('open');
+              }
+          });
+          close.click(closeMenuMob)
+          layer.click(closeMenuMob)
     }
 }
 function closeMenuMob(e){

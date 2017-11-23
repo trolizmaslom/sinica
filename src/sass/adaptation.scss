@@ -116,6 +116,10 @@
 	.wrap-sidebar{border:none;}
 	.suggest-nav-wrap{display: none;}
 	.left-menu__content .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{height: 100%}
+	.recomend{
+		&:before{top: 20px;}
+	}
+
 
 }
 @media screen and (max-width: 924px){
@@ -204,7 +208,6 @@
 	.recomend__slider-wrap{margin: 0;}
 	.recomend__slider{width: 360px; margin: 0 auto}
 	.recomend {
-		&:before{top: 19px;}
 		.slick-arrow{top: -30px;}
 	}
 

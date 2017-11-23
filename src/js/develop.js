@@ -59,6 +59,7 @@ function logRegClick(){
 //menuMob
 var menu = $('.left-menu');
 var butt = $('.js-butterButton, .js-mobSort, .js-mobFilter');
+var body = $('body');
 function leftMenu(){
     var close = $('.left-menu__close button');
     var layer = $('.js-layer-close');
@@ -72,9 +73,11 @@ function leftMenu(){
               $this.toggleClass('active');
               if($this.hasClass('active')){
                $('.left-menu[data-menu="'+attr+'"]').addClass('open');
+               body.addClass('active');
               }
               else{
                   menu.removeClass('open');
+                  body.removeClass('active');
               }
           });
           close.click(closeMenuMob)
@@ -85,6 +88,7 @@ function closeMenuMob(e){
     e.preventDefault();
     butt.removeClass('active');
     menu.removeClass('open');
+    body.removeClass('active');
 }
 //menuMob end
 function slideInit() {
@@ -225,7 +229,6 @@ function slideRecomendlInit() {
             speed: 500,
             responsive: [
                 {
-
                     breakpoint: 1116,
                     settings: {
                         slidesToShow: 2,
@@ -247,7 +250,6 @@ function slideRecomendlInit() {
 }
 function placeholder(){
     placeholderFocus ($('input + .placeholder'));
-    // placeholderFocus ($('input + .plaseholder--help'));
 }
 function placeholderFocus (element){
     if(element> 0){
@@ -397,7 +399,7 @@ function showDetailProdPopup(){
     })
 }
 $(window).on("load",function(){
-  $(".js-custom-scroll").mCustomScrollbar({
+  $(".js-custom-scroll, .left-menu__content").mCustomScrollbar({
     "theme" : "dark-2"
     });
   $(".js-chat-scroll, .js-scroll-bold").mCustomScrollbar({

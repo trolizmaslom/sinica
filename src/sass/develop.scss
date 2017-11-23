@@ -41,6 +41,7 @@ body{min-height:100%;width:100%;min-width:320px;background:#fff;color:#0f0f0f;po
     /* /styles for wp-admin panel */
 
 }
+body.active{overflow: hidden;}
 img{vertical-align:bottom;border:0;max-width:100%;}
 
 /* adapted styles for wp-admin panel */
@@ -192,13 +193,6 @@ input, textarea{
   }
   .placeholder{pointer-events: none; position: absolute; top: 12px;  left: 25px; transition:all 200ms; 
   }
-  // .placeholder--help{
-  //       opacity: 0; font-family: Arial, sans-serif; pointer-events: none; position: absolute;    left: 25px; transition:all 200ms;
-  //  }
-  // .placeholder--help.focus, input:focus ~ .placeholder--help{
-  //   top: 41px;
-  //   opacity: 1;
-  // }
 .tel-mask{font-family: Arial, sans-serif}
  .placeholder.focus,
     input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
@@ -292,7 +286,6 @@ input, textarea{
           p{ margin: 0;}
           a{ color: #0f0f0f; font-weight: 700; font-family: Arial, sans-serif; font-size:19px; display: block; padding-top: 6px; text-decoration: none; position: relative;
             &:before{ content: ''; display: block; width: 100%; height: 1px; background-color: #000; left: 0; bottom:-3px; position: absolute; animation-play-state: paused; animation-name: tel; animation-duration: 2s; animation-iteration-count: infinite; opacity: 0;}
-            //&:hover:before{animation-play-state: running; opacity: 1;}
           }
         }
         &__cabinet{ position: absolute; top: 44px; right: 16px; z-index: 300;}
@@ -352,7 +345,7 @@ input, textarea{
           &:last-child{transform:rotate(-45deg);}
         }
       }
-      &__content{ padding-top: 43px; overflow-y:auto;        height: 100%;
+      &__content{ padding-top: 43px; height: calc(100% - 50px);
         ul{ list-style-type: none; width: 100%; font-family:'futura'; text-transform: uppercase; padding: 0; margin: 0;}
         &__item{border-bottom: 2px solid #d6d6d6; padding:10px 8px 10px 9px;
           li:not(:last-child){border-bottom: 1px solid #f6f6f6; }
@@ -430,7 +423,6 @@ input, textarea{
     &__slide{ display: flex; justify-content: space-between; align-items: flex-start;}
     &__item{ width: 360px;  position: relative; display: block; text-decoration: none; margin: 0 auto;  background-color: #fff;
       &:hover{text-decoration: none;
-        // .actual__txt span{color: #000;}
         .actual__img:before{background-color: rgba(0,0,0,0.85)}
       }
       img{ position: relative; z-index: 5; margin: 0 auto; object-fit: cover; height: 100%; width: 100%;}
@@ -558,7 +550,6 @@ input, textarea{
       letter-spacing: 0.7px;
       font-family: 'Raleway';
       font-weight: 200;
-      // font-family: 'Raleway-ExtraLight';
     }
     li:last-child{
       a{
@@ -718,8 +709,6 @@ input, textarea{
 }
 .table{
   &__row:hover{
-    // line-height: 59px;
-    // height: 60px;
     >div:nth-child(odd){
       background-color: #dddddd;
     }
@@ -757,8 +746,6 @@ input, textarea{
     margin: 0 -15px;
   }
   &__slide-wrap{
-    // width: 31.5%;
-    // max-width: 365px;
     margin: 0 15px;
   }
   &__slide{
@@ -1152,7 +1139,7 @@ input[type="checkbox"]:checked+label:before {
   &__place{font-size: 16px; padding-right: 10px; width: 100%; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; font-weight: bold;    padding-left: 22px;    font-family: Arial;}
   &__btn-xs{
     span{ position:relative; box-shadow:none; width: 120px; height: 33px; font-size: 14px; border: 1px solid #c7c7c7; background: #e6e6e6;
-        &:before{content: "зарезервувати"; position: absolute; font-weight: 300;}
+        &:before{content: "зарезервувати"; font-weight: 300;}
         }
     }
     .button:hover{
@@ -1163,16 +1150,14 @@ input[type="checkbox"]:checked+label:before {
       }
     }
 }
-.booking-table .mCustomScrollBox {
-    height: 310px;
-}
+.booking-table .mCustomScrollBox { height: 310px;}
 .booking-table .mCSB_inside > .mCSB_container_wrapper{ margin: 0;}
 .booking-table .mCSB_container_wrapper > .mCSB_container{padding-right: 0; padding-bottom: 0}
 .booking-table .mCSB_scrollTools_vertical .mCSB_draggerContainer { background: #fff;  position: absolute;  top: 10px;   left: -6px;  width: 16px;  bottom: 4px;     border-radius: 2px;}
-.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar,.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
-.booking-table #mCSB_2_scrollbar_vertical .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
+.booking-table .mCS-dark-2.mCSB_scrollTools_vertical .mCSB_dragger_bar, .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 4px; width: 6px; height: 95%;}
+.booking-table .mCS-dark-2.mCSB_scrollTools_vertical .mCSB_dragger .mCSB_dragger_bar{background-color: #959595;     margin-top: 5px;}
 .booking-table .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{background-color: #fff;}
-.booking-table #mCSB_2_scrollbar_horizontal .mCSB_draggerContainer{background: #fff; width: 100%}
+.booking-table .mCSB_vertical_horizontal .mCSB_draggerContainer{background: #fff; width: 100%}
 .booking-table .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ background: #fff;}
 .booking-table .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{  border-radius: 4px; height: 6px; width: 95%; background-color: #959595; margin-left: 5px;}
 .booking{    margin-bottom: 115px;
@@ -1739,7 +1724,6 @@ input[type="checkbox"]:checked+label:before {
         height: auto;
         top: 50%;
         width: auto;
-        // margin-left: 2px;
         background-size: 14px;
         border: solid #a2a2a2;
         border-width: 0 2px 2px 0;

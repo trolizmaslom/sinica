@@ -185,7 +185,7 @@ input, textarea{
         &:hover{ text-decoration: none;}
       }
     }
-    &--between-reg{ display: flex; justify-content: space-between; align-items: flex-start;
+    &--between-reg{ display: flex; justify-content: space-between; align-items: flex-start; flex-wrap:wrap;
       input{ height: 39px; line-height: 39px;}
       input{ height: 39px; line-height: 39px;}
     }
@@ -196,6 +196,11 @@ input, textarea{
 .tel-mask{font-family: Arial, sans-serif}
  .placeholder.focus,
     input:focus + .placeholder{ left: 10px; top: -16px; opacity: 0}
+  .popup-reg{
+    .form_input{
+      width: 50%;
+    }
+  }
 /*END forms*/
 .icon-mail{
   fill: #aeaeae;
@@ -494,13 +499,14 @@ input, textarea{
   .copyright{ background-color: #3d3d3d; font-weight: 300; text-align: center; height: 60px; display: flex; justify-content: center; align-items: center; color: #ccc;}
   .footer{ background-color: #000; color: #fff;
     &__wrap{ display: flex; justify-content: space-between; align-items: flex-end; padding: 30px 0 40px;}
-    &__nav{ width: 566px; display: flex; justify-content: flex-start;
+    &__nav{ width: 566px; display: flex; justify-content: flex-start; flex-wrap: wrap;     margin-bottom: 28px;
       a{ color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 300; font-size: 12px; margin-top: 38px; display: inline-block; position: relative;
         &:before{ content: ''; position: absolute; left:calc(50% - 4px); bottom: 5px; width: 6px; height: 6px; border-radius:50%; background-color: #fff; opacity: 0; transition: all 100ms;}
         &:hover:before{ opacity: 1; bottom: -12px;}
       }
+      &__item{width: 33.33%}
     }
-    &__col{ width: 190px; padding-bottom: 28px;}
+    // &__col{ width: 190px; padding-bottom: 28px;}
     &__contact{ width: 344px; border-left: 1px solid #7c7c7c; border-right: 1px solid #7c7c7c; height: 114px; display: flex; justify-content: space-around; align-items: center ; flex-direction: column;
       a{width: 240px;}
     }
@@ -940,7 +946,7 @@ input, textarea{
 .btn_row-delete:after {transform: rotate(-45deg);}
 .basket__tabs_item_3 .btable__row{margin: 40px 60px 0;  padding-bottom: 35px;}
 .banner{
-  &__inner{ position: relative; min-height: 320px;}
+  &__inner{ position: relative; min-height: 320px; background: url(../images/dotted.jpg);}
   &__subtitle{    font-size: 17px;  margin-top: 28px; padding-right: 10px;}
   &__title{    font-size: 61px; font-weight: 900;  margin-top: 8px;}
   &__inner-text{position: absolute; font-family: "Raleway";  top: 26%; left: 18%;}
@@ -986,19 +992,9 @@ input, textarea{
 }
 .suggest-banner{
     position: absolute;
-    height: 320px;
-    width: 100%;
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    background: url(../images/suggest-banner.jpg);
-    background-repeat: no-repeat;
-  }
+    right: 14%;
+    bottom: 0;
+    width: 380px;
 }
 input[type=checkbox] {
     display: none;
@@ -2164,3 +2160,16 @@ input[type="checkbox"]:checked+label:before {
     }
   }
 }
+.popup-reg .fancybox-close-small{
+  display: none;
+}
+.popup-reg .fancybox-close-small--custom{  border: none; background: transparent; width: 36px; height: 36px; position: absolute; top: -42px; right: -webkit-calc(50% - 18px); right: -moz-calc(50% - 18px); right: calc(50% - 18px); border-radius: 0; outline: none; z-index: 10; cursor: pointer;
+    &:hover{
+      &:before{animation-name: crosshoverfirst; animation-duration: 1s; animation-iteration-count: infinite;animation-delay: 200ms;}
+      &:after{animation-name: crosshoverlast; animation-duration: 1s;animation-iteration-count: infinite;}
+    }
+    &:before,
+    &:after{content:''; width: 28px; height: 2px; background-color: #fff; display: block; position: absolute; top: 17px; right: 4px; border-radius: 0;}
+    &:before{transform:rotate(45deg);}
+    &:after{transform:rotate(-45deg);}
+  }
